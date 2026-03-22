@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "title": "Ustawienia profilu",
+    "email": "Adres e-mail",
+    "roles": "Role",
+    "editNote": "Edycja profilu (zmiana nazwy, adresu e-mail) nie jest dostępna w V1. Skontaktuj się z pomocą techniczną.",
+    "roleLabel": {
+      "ROLE_USER": "Użytkownik",
+      "ROLE_ADMIN": "Administrator"
+    }
+  },
+  "language": {
+    "title": "Ustawienia języka"
+  }
+}

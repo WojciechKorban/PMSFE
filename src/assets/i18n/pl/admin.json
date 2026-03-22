@@ -1,0 +1,45 @@
+{
+  "title": "Panel admina",
+  "nav": {
+    "users": "Użytkownicy",
+    "auditLog": "Dziennik audytu"
+  },
+  "health": {
+    "title": "Stan systemu",
+    "totalUsers": "Wszyscy użytkownicy",
+    "totalProperties": "Wszystkie nieruchomości",
+    "pendingEvents": "Oczekujące zdarzenia outbox",
+    "failedEvents": "Nieudane zdarzenia outbox",
+    "failedWarning": "Istnieją nieudane zdarzenia outbox wymagające uwagi."
+  },
+  "users": {
+    "title": "Wszyscy użytkownicy",
+    "email": "E-mail",
+    "roles": "Role",
+    "properties": "Nieruchomości",
+    "createdAt": "Utworzono",
+    "deleted": "Usunięty",
+    "actions": "Akcje"
+  },
+  "properties": {
+    "title": "Wszystkie nieruchomości",
+    "columns": {
+      "name": "Nazwa nieruchomości",
+      "city": "Miasto",
+      "createdAt": "Utworzono",
+      "id": "ID"
+    }
+  },
+  "system": {
+    "title": "Stan systemu",
+    "refresh": "Odśwież",
+    "replayFailed": "Powtórz nieudane zdarzenia",
+    "replayNote": "Użyj dziennika audytu, aby powtórzyć konkretne zdarzenia",
+    "stats": {
+      "pendingOutbox": "Oczekujące zdarzenia outbox",
+      "failedOutbox": "Nieudane zdarzenia outbox",
+      "totalUsers": "Wszyscy użytkownicy",
+      "totalProperties": "Wszystkie nieruchomości"
+    }
+  }
+}

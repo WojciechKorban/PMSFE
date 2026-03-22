@@ -1,0 +1,51 @@
+{
+  "hub": {
+    "title": "Raporty",
+    "csv": {
+      "title": "Odczyty liczników CSV",
+      "description": "Pobierz odczyty liczników jako plik CSV dla wybranego zakresu dat.",
+      "action": "Pobierz CSV"
+    },
+    "pdf": {
+      "title": "Rentowność PDF",
+      "description": "Wygeneruj podsumowanie rentowności jako raport PDF.",
+      "action": "Generuj PDF"
+    },
+    "async": {
+      "title": "Raport asynchroniczny",
+      "description": "Zlecenie raportu do przetwarzania w tle. Otrzymasz link do pobrania gdy będzie gotowy.",
+      "action": "Zleć raport"
+    }
+  },
+  "csv": {
+    "title": "Pobierz odczyty liczników CSV",
+    "property": "Nieruchomość",
+    "from": "Od dnia",
+    "to": "Do dnia",
+    "download": "Pobierz CSV",
+    "downloading": "Pobieranie...",
+    "success": "CSV pobrano pomyślnie",
+    "error": "Błąd podczas pobierania CSV"
+  },
+  "async": {
+    "title": "Raport asynchroniczny",
+    "property": "Nieruchomość",
+    "reportType": "Typ raportu",
+    "from": "Od dnia",
+    "to": "Do dnia",
+    "submit": "Zleć raport",
+    "status": {
+      "PENDING": "Oczekuje...",
+      "PROCESSING": "Generowanie raportu...",
+      "COMPLETE": "Raport gotowy",
+      "FAILED": "Generowanie raportu nie powiodło się"
+    },
+    "download": "Pobierz raport",
+    "types": {
+      "PROFITABILITY_SUMMARY": "Podsumowanie rentowności",
+      "METER_READINGS_CSV": "Odczyty liczników CSV",
+      "PROFITABILITY_COMPARISON": "Porównanie rentowności",
+      "ANNUAL_SUMMARY": "Podsumowanie roczne"
+    }
+  }
+}

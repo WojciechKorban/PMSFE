@@ -1,0 +1,45 @@
+{
+  "title": "Admin Panel",
+  "nav": {
+    "users": "Users",
+    "auditLog": "Audit Log"
+  },
+  "health": {
+    "title": "System Health",
+    "totalUsers": "Total Users",
+    "totalProperties": "Total Properties",
+    "pendingEvents": "Pending Outbox Events",
+    "failedEvents": "Failed Outbox Events",
+    "failedWarning": "There are failed outbox events that require attention."
+  },
+  "users": {
+    "title": "All Users",
+    "email": "Email",
+    "roles": "Roles",
+    "properties": "Properties",
+    "createdAt": "Created",
+    "deleted": "Deleted",
+    "actions": "Actions"
+  },
+  "properties": {
+    "title": "All Properties",
+    "columns": {
+      "name": "Property Name",
+      "city": "City",
+      "createdAt": "Created",
+      "id": "ID"
+    }
+  },
+  "system": {
+    "title": "System Health",
+    "refresh": "Refresh",
+    "replayFailed": "Replay Failed Events",
+    "replayNote": "Use audit log to replay specific events",
+    "stats": {
+      "pendingOutbox": "Pending Outbox Events",
+      "failedOutbox": "Failed Outbox Events",
+      "totalUsers": "Total Users",
+      "totalProperties": "Total Properties"
+    }
+  }
+}

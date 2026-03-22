@@ -1,0 +1,69 @@
+{
+  "list": {
+    "title": "Nieruchomości",
+    "addButton": "Dodaj nieruchomość",
+    "emptyState": {
+      "title": "Brak nieruchomości",
+      "description": "Dodaj swoją pierwszą nieruchomość, aby rozpocząć.",
+      "action": "Dodaj nieruchomość"
+    },
+    "searchPlaceholder": "Szukaj nieruchomości...",
+    "loadError": "Nie udało się załadować nieruchomości."
+  },
+  "detail": {
+    "editButton": "Edytuj",
+    "deleteButton": "Usuń nieruchomość",
+    "tabs": {
+      "overview": "Przegląd",
+      "meters": "Liczniki",
+      "tariffs": "Taryfy",
+      "tenants": "Najemcy",
+      "contracts": "Umowy",
+      "fixedCosts": "Koszty stałe",
+      "equipment": "Wyposażenie",
+      "profitability": "Rentowność"
+    },
+    "address": "Adres",
+    "noAddress": "Brak adresu",
+    "description": "Opis",
+    "noDescription": "Brak opisu",
+    "addedOn": "Dodano",
+    "lastUpdated": "Ostatnia aktualizacja"
+  },
+  "form": {
+    "createTitle": "Dodaj nieruchomość",
+    "editTitle": "Edytuj nieruchomość",
+    "nameLabel": "Nazwa nieruchomości",
+    "namePlaceholder": "np. Mieszkanie Warszawa Centrum",
+    "streetLabel": "Ulica i numer",
+    "streetPlaceholder": "np. Marszałkowska 12/3",
+    "cityLabel": "Miasto",
+    "cityPlaceholder": "np. Warszawa",
+    "postalCodeLabel": "Kod pocztowy",
+    "postalCodePlaceholder": "np. 00-001",
+    "countryLabel": "Kraj",
+    "countryPlaceholder": "np. Polska",
+    "descriptionLabel": "Opis",
+    "descriptionPlaceholder": "Opcjonalne uwagi o nieruchomości",
+    "saveButton": "Zapisz nieruchomość",
+    "cancelButton": "Anuluj",
+    "createSuccess": "Nieruchomość została utworzona.",
+    "updateSuccess": "Nieruchomość została zaktualizowana."
+  },
+  "delete": {
+    "confirmTitle": "Usuń nieruchomość",
+    "confirmMessage": "Czy na pewno chcesz usunąć \"{{name}}\"? Tej operacji nie można cofnąć.",
+    "confirmButton": "Usuń",
+    "success": "Nieruchomość usunięta.",
+    "errorHasMeters": "Nie można usunąć nieruchomości z aktywnymi licznikami."
+  },
+  "sections": {
+    "meters": "Liczniki",
+    "tenants": "Najemcy",
+    "contracts": "Umowy",
+    "equipment": "Wyposażenie",
+    "fixedCosts": "Koszty stałe",
+    "profitability": "Rentowność"
+  },
+  "comingSoon": "Ta sekcja będzie dostępna w przyszłej aktualizacji."
+}

@@ -1,0 +1,33 @@
+{
+  "tenants": {
+    "title": "Najemcy",
+    "addTenant": "Dodaj najemcę",
+    "empty": "Brak najemców",
+    "search": "Szukaj po nazwie lub email",
+    "form": {
+      "createTitle": "Dodaj najemcę",
+      "editTitle": "Edytuj najemcę",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "notes": "Uwagi"
+    },
+    "detail": {
+      "title": "Szczegóły najemcy",
+      "occupancy": "Historia zajmowania"
+    },
+    "occupancy": {
+      "assignTitle": "Przypisz najemcę",
+      "selectTenant": "Wybierz najemcę",
+      "startDate": "Data rozpoczęcia",
+      "endDate": "Data zakończenia",
+      "assign": "Przypisz",
+      "remove": "Usuń z nieruchomości",
+      "removeConfirmTitle": "Usuń najemcę",
+      "removeConfirmMessage": "Usunąć tego najemcę z nieruchomości?",
+      "active": "Aktualnie aktywny",
+      "inactive": "Poprzedni najem"
+    }
+  }
+}

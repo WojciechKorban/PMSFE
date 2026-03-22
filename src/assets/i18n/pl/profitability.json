@@ -1,0 +1,48 @@
+{
+  "fixedCosts": {
+    "title": "Koszty stałe",
+    "addCost": "Dodaj koszt",
+    "empty": "Brak kosztów stałych",
+    "active": "Aktywne",
+    "inactive": "Nieaktywne / Historyczne",
+    "from": "Od",
+    "deactivate": "Dezaktywuj",
+    "deactivateTitle": "Dezaktywacja kosztu",
+    "deactivateMessage": "Dezaktywować \"{{name}}\"? Dzisiaj zostanie zapisana jako data zakończenia.",
+    "form": {
+      "name": "Nazwa kosztu",
+      "amount": "Kwota miesięczna",
+      "currency": "Waluta",
+      "validFrom": "Obowiązuje od"
+    }
+  },
+  "reports": {
+    "dateRange": {
+      "from": "Od",
+      "to": "Do",
+      "apply": "Zastosuj",
+      "hint": "Wybierz zakres dat aby wygenerować raporty"
+    },
+    "profitability": {
+      "title": "Raporty rentowności",
+      "downloads": "Pobierz raporty",
+      "downloadPdf": "Pobierz PDF rentowności",
+      "navLabel": "Rentowność"
+    },
+    "csv": {
+      "download": "Pobierz CSV odczytów"
+    },
+    "async": {
+      "title": "Raport w tle",
+      "hint": "Duże raporty są generowane w tle. Otrzymasz link do pobrania gdy będzie gotowy.",
+      "request": "Wygeneruj raport w tle",
+      "pending": "W kolejce...",
+      "processing": "Generowanie...",
+      "complete": "Raport gotowy",
+      "failed": "Błąd generowania",
+      "download": "Pobierz raport",
+      "newReport": "Nowy raport",
+      "retry": "Ponów"
+    }
+  }
+}

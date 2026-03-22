@@ -1,0 +1,17 @@
+{
+  "validation": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "minlength": "Minimum {{requiredLength}} characters required.",
+    "maxlength": "Maximum {{requiredLength}} characters allowed.",
+    "min": "Minimum value is {{min}}.",
+    "max": "Maximum value is {{max}}.",
+    "pattern": "Invalid format.",
+    "passwordMismatch": "Passwords do not match.",
+    "passwordStrength": "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
+    "dateRange": "End date must be after start date.",
+    "futureDate": "Date must be in the future.",
+    "readingValue": "Reading must be greater than or equal to the previous reading ({{previousValue}}).",
+    "maxPeriodDays": "Period cannot exceed {{maxDays}} days."
+  }
+}

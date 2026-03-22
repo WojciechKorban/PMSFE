@@ -1,0 +1,48 @@
+{
+  "fixedCosts": {
+    "title": "Fixed Costs",
+    "addCost": "Add Cost",
+    "empty": "No fixed costs",
+    "active": "Active",
+    "inactive": "Inactive / Historical",
+    "from": "From",
+    "deactivate": "Deactivate",
+    "deactivateTitle": "Deactivate Fixed Cost",
+    "deactivateMessage": "Deactivate \"{{name}}\"? This will set today as the end date.",
+    "form": {
+      "name": "Cost Name",
+      "amount": "Monthly Amount",
+      "currency": "Currency",
+      "validFrom": "Valid From"
+    }
+  },
+  "reports": {
+    "dateRange": {
+      "from": "From Date",
+      "to": "To Date",
+      "apply": "Apply",
+      "hint": "Select a date range to generate reports"
+    },
+    "profitability": {
+      "title": "Profitability Reports",
+      "downloads": "Download Reports",
+      "downloadPdf": "Download Profitability PDF",
+      "navLabel": "Profitability"
+    },
+    "csv": {
+      "download": "Download Meter Readings CSV"
+    },
+    "async": {
+      "title": "Background Report",
+      "hint": "Large reports are generated in the background. You will get a download link when ready.",
+      "request": "Request Background Report",
+      "pending": "Queued...",
+      "processing": "Generating...",
+      "complete": "Report ready",
+      "failed": "Generation failed",
+      "download": "Download Report",
+      "newReport": "New Report",
+      "retry": "Retry"
+    }
+  }
+}

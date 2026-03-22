@@ -1,0 +1,136 @@
+{
+  "app": {
+    "name": "System Zarządzania Nieruchomościami",
+    "tagline": "Zarządzaj swoimi nieruchomościami z łatwością"
+  },
+  "buttons": {
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "add": "Dodaj",
+    "back": "Wróć",
+    "next": "Dalej",
+    "confirm": "Potwierdź",
+    "close": "Zamknij",
+    "search": "Szukaj",
+    "filter": "Filtruj",
+    "export": "Eksportuj",
+    "download": "Pobierz",
+    "refresh": "Odśwież",
+    "retry": "Spróbuj ponownie",
+    "view": "Zobacz",
+    "manage": "Zarządzaj",
+    "menu": "Menu"
+  },
+  "labels": {
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "error": "Błąd",
+    "success": "Sukces",
+    "warning": "Ostrzeżenie",
+    "info": "Informacja",
+    "optional": "opcjonalnie",
+    "required": "wymagane"
+  },
+  "status": {
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "pending": "Oczekujący",
+    "complete": "Zakończony",
+    "failed": "Błąd"
+  },
+  "pagination": {
+    "showing": "Wyświetlanie",
+    "of": "z",
+    "items": "elementów",
+    "nextPage": "Następna strona",
+    "previousPage": "Poprzednia strona"
+  },
+  "confirmations": {
+    "deleteTitle": "Potwierdź usunięcie",
+    "deleteMessage": "Tej operacji nie można cofnąć. Czy na pewno chcesz kontynuować?",
+    "areYouSure": "Czy na pewno?"
+  },
+  "common": {
+    "errors": {
+      "networkError": "Błąd sieci. Sprawdź połączenie internetowe.",
+      "serverError": "Błąd serwera. Spróbuj ponownie później.",
+      "notFound": "Żądany zasób nie został znaleziony.",
+      "forbidden": "Nie masz uprawnień do wykonania tej operacji.",
+      "conflict": "Wystąpił konflikt. Zasób już istnieje.",
+      "rateLimitExceeded": "Zbyt wiele prób. Spróbuj ponownie za {{retryAfter}} sekund.",
+      "unknownError": "Wystąpił nieoczekiwany błąd.",
+      "validationError": "Sprawdź formularz pod kątem błędów."
+    }
+  },
+  "time": {
+    "today": "Dzisiaj",
+    "yesterday": "Wczoraj",
+    "daysAgo": "{{count}} dni temu",
+    "dateFormat": "DD.MM.YYYY",
+    "timeFormat": "HH:mm"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Zmień język",
+    "label": "Język"
+  },
+  "nav": {
+    "dashboard": "Pulpit",
+    "properties": "Nieruchomości",
+    "tenants": "Najemcy",
+    "reports": "Raporty",
+    "settings": "Ustawienia",
+    "admin": "Administrator",
+    "logout": "Wyloguj się"
+  },
+  "dashboard": {
+    "welcome": "Witaj, {{name}}!",
+    "welcomeGeneric": "Witaj!",
+    "propertyCount": {
+      "one": "{{count}} nieruchomość",
+      "few": "{{count}} nieruchomości",
+      "many": "{{count}} nieruchomości",
+      "other": "{{count}} nieruchomości"
+    },
+    "emptyState": {
+      "title": "Brak nieruchomości",
+      "description": "Zacznij od dodania swojej pierwszej nieruchomości.",
+      "action": "Dodaj pierwszą nieruchomość"
+    },
+    "recentActivity": "Ostatnia aktywność",
+    "noActivity": "Brak ostatniej aktywności"
+  },
+  "breadcrumb": {
+    "home": "Strona główna",
+    "properties": "Nieruchomości",
+    "newProperty": "Nowa nieruchomość",
+    "edit": "Edytuj"
+  },
+  "all": "Wszystkie",
+  "view": "Podgląd",
+  "edit": "Edytuj",
+  "delete": "Usuń",
+  "cancel": "Anuluj",
+  "confirm": "Potwierdź",
+  "save": "Zapisz",
+  "create": "Utwórz",
+  "error": {
+    "loadFailed": "Nie udało się załadować danych. Spróbuj ponownie."
+  },
+  "pagination": "Strona {{page}} z {{total}}",
+  "toggleMenu": "Przełącz menu nawigacji",
+  "toggleTheme": "Zmień motyw",
+  "actions": {
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "view": "Pokaż szczegóły",
+    "add": "Dodaj",
+    "refresh": "Odśwież"
+  },
+  "notFound": {
+    "title": "Strona nie istnieje",
+    "message": "Strona, której szukasz, nie istnieje.",
+    "goHome": "Przejdź do pulpitu"
+  }
+}

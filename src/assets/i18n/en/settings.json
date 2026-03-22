@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "title": "Profile Settings",
+    "email": "Email Address",
+    "roles": "Roles",
+    "editNote": "Profile editing (name, email change) is not available in V1. Contact support for changes.",
+    "roleLabel": {
+      "ROLE_USER": "User",
+      "ROLE_ADMIN": "Administrator"
+    }
+  },
+  "language": {
+    "title": "Language Settings"
+  }
+}

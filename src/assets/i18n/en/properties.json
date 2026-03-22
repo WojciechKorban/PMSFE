@@ -1,0 +1,69 @@
+{
+  "list": {
+    "title": "Properties",
+    "addButton": "Add property",
+    "emptyState": {
+      "title": "No properties yet",
+      "description": "Add your first property to get started.",
+      "action": "Add property"
+    },
+    "searchPlaceholder": "Search properties...",
+    "loadError": "Failed to load properties."
+  },
+  "detail": {
+    "editButton": "Edit",
+    "deleteButton": "Delete property",
+    "tabs": {
+      "overview": "Overview",
+      "meters": "Meters",
+      "tariffs": "Tariffs",
+      "tenants": "Tenants",
+      "contracts": "Contracts",
+      "fixedCosts": "Fixed costs",
+      "equipment": "Equipment",
+      "profitability": "Profitability"
+    },
+    "address": "Address",
+    "noAddress": "No address provided",
+    "description": "Description",
+    "noDescription": "No description provided",
+    "addedOn": "Added on",
+    "lastUpdated": "Last updated"
+  },
+  "form": {
+    "createTitle": "Add property",
+    "editTitle": "Edit property",
+    "nameLabel": "Property name",
+    "namePlaceholder": "e.g. Apartment Warsaw Center",
+    "streetLabel": "Street and number",
+    "streetPlaceholder": "e.g. Marszalkowska 12/3",
+    "cityLabel": "City",
+    "cityPlaceholder": "e.g. Warsaw",
+    "postalCodeLabel": "Postal code",
+    "postalCodePlaceholder": "e.g. 00-001",
+    "countryLabel": "Country",
+    "countryPlaceholder": "e.g. Poland",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Optional notes about the property",
+    "saveButton": "Save property",
+    "cancelButton": "Cancel",
+    "createSuccess": "Property created successfully.",
+    "updateSuccess": "Property updated successfully."
+  },
+  "delete": {
+    "confirmTitle": "Delete property",
+    "confirmMessage": "Are you sure you want to delete \"{{name}}\"? This action cannot be undone.",
+    "confirmButton": "Delete",
+    "success": "Property deleted.",
+    "errorHasMeters": "Cannot delete property with active meters."
+  },
+  "sections": {
+    "meters": "Meters",
+    "tenants": "Tenants",
+    "contracts": "Contracts",
+    "equipment": "Equipment",
+    "fixedCosts": "Fixed costs",
+    "profitability": "Profitability"
+  },
+  "comingSoon": "This section will be available in a future update."
+}

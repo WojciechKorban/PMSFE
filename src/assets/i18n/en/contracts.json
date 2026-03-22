@@ -1,0 +1,42 @@
+{
+  "contracts": {
+    "title": "Contracts",
+    "addContract": "Add Contract",
+    "empty": "No contracts",
+    "status": {
+      "ACTIVE": "Active",
+      "TERMINATED": "Terminated",
+      "EXPIRED": "Expired"
+    },
+    "form": {
+      "createTitle": "New Contract",
+      "tenant": "Tenant",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "openEnded": "Open-ended contract",
+      "monthlyAmount": "Monthly Amount",
+      "currency": "Currency",
+      "notes": "Notes"
+    },
+    "detail": {
+      "title": "Contract Details",
+      "dates": "Duration",
+      "amount": "Monthly Amount",
+      "documents": "Documents"
+    },
+    "terminate": {
+      "button": "Terminate Contract",
+      "dialogTitle": "Terminate Contract",
+      "reason": "Reason (optional)",
+      "confirm": "Terminate",
+      "warning": "This action cannot be undone."
+    },
+    "documents": {
+      "upload": "Upload Document",
+      "download": "Download",
+      "size": "Size",
+      "uploadedAt": "Uploaded",
+      "empty": "No documents attached"
+    }
+  }
+}

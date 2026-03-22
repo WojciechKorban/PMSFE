@@ -1,0 +1,68 @@
+{
+  "meters": {
+    "title": "Liczniki",
+    "addMeter": "Dodaj licznik",
+    "empty": "Brak liczników",
+    "noReadings": "Brak odczytów",
+    "latestReading": "Ostatni odczyt",
+    "replace": "Wymień licznik",
+    "filter": {
+      "utilityType": "Filtruj po typie"
+    },
+    "utilityType": {
+      "ELECTRICITY": "Prąd",
+      "GAS": "Gaz",
+      "WATER": "Woda",
+      "HEAT": "Ciepło",
+      "OTHER": "Inne"
+    },
+    "status": {
+      "ACTIVE": "Aktywny",
+      "REPLACED": "Wymieniony",
+      "DECOMMISSIONED": "Wycofany"
+    },
+    "form": {
+      "createTitle": "Dodaj licznik",
+      "editTitle": "Edytuj licznik",
+      "utilityType": "Typ medium",
+      "serialNumber": "Numer seryjny",
+      "unit": "Jednostka",
+      "installationDate": "Data montażu",
+      "notes": "Uwagi"
+    },
+    "readings": {
+      "addReading": "Dodaj odczyt",
+      "date": "Data odczytu",
+      "value": "Wartość",
+      "notes": "Uwagi",
+      "save": "Zapisz odczyt",
+      "empty": "Brak zapisanych odczytów"
+    },
+    "photos": {
+      "upload": "Wgraj zdjęcie",
+      "attachPhoto": "Załącz zdjęcie",
+      "delete": "Usuń zdjęcie"
+    },
+    "tabs": {
+      "readings": "Odczyty",
+      "info": "Informacje"
+    },
+    "replacement": {
+      "title": "Wymiana licznika",
+      "newSerialNumber": "Nowy numer seryjny",
+      "replacementDate": "Data wymiany",
+      "oldFinalReading": "Końcowy odczyt starego licznika",
+      "newInitialReading": "Początkowy odczyt nowego licznika",
+      "reason": "Powód (opcjonalnie)",
+      "confirm": "Potwierdź wymianę"
+    }
+  },
+  "tariffs": {
+    "title": "Taryfy",
+    "addTariff": "Dodaj taryfę",
+    "empty": "Brak skonfigurowanych taryf",
+    "pricePerUnit": "Cena za jednostkę",
+    "currency": "Waluta",
+    "validFrom": "Obowiązuje od"
+  }
+}

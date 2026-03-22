@@ -1,0 +1,111 @@
+{
+  "notifications": {
+    "preferences": {
+      "title": "Preferencje powiadomień",
+      "email": "Powiadomienia email",
+      "enableEmail": "Włącz powiadomienia email",
+      "leaseExpiry": "Ostrzeżenie o wygaśnięciu umowy",
+      "warningDays": "Dni przed wygaśnięciem",
+      "warningDaysHint": "1–90 dni przed końcem umowy",
+      "meterReading": "Przypomnienie o odczycie",
+      "reminderDay": "Dzień miesiąca",
+      "dayHint": "Dzień miesiąca (1–28)",
+      "profitabilityReport": "Miesięczny raport rentowności",
+      "enableProfitability": "Włącz miesięczny raport",
+      "reportDay": "Dzień wysyłki raportu",
+      "saved": "Preferencje zapisane"
+    },
+    "history": {
+      "title": "Historia powiadomień",
+      "empty": "Brak wysłanych powiadomień",
+      "status": "Status",
+      "template": "Typ",
+      "subject": "Temat",
+      "sentAt": "Wysłano"
+    },
+    "status": {
+      "SENT": "Wysłano",
+      "FAILED": "Błąd",
+      "PENDING": "Oczekuje",
+      "SKIPPED": "Pominięto"
+    },
+    "template": {
+      "lease_expiry_warning": "Ostrzeżenie o wygaśnięciu umowy",
+      "meter_reading_reminder": "Przypomnienie o odczycie",
+      "profitability_report": "Raport rentowności"
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Ustawienia języka",
+      "subtitle": "Wybierz preferowany język interfejsu.",
+      "changed": "Język został zmieniony"
+    }
+  },
+  "admin": {
+    "title": "Panel Admina",
+    "nav": {
+      "users": "Użytkownicy",
+      "properties": "Nieruchomości",
+      "auditLog": "Dziennik zdarzeń"
+    },
+    "health": {
+      "title": "Stan systemu",
+      "pendingEvents": "Oczekujące zdarzenia",
+      "failedEvents": "Nieudane zdarzenia",
+      "totalUsers": "Wszyscy użytkownicy",
+      "totalProperties": "Wszystkie nieruchomości",
+      "failedWarning": "Istnieją nieudane zdarzenia wymagające uwagi."
+    },
+    "users": {
+      "title": "Użytkownicy",
+      "email": "Email",
+      "roles": "Role",
+      "properties": "Nieruchomości",
+      "createdAt": "Rejestracja",
+      "deleted": "Usunięty"
+    },
+    "auditLog": {
+      "title": "Dziennik zdarzeń",
+      "action": "Akcja",
+      "entityType": "Encja",
+      "user": "Użytkownik",
+      "timestamp": "Czas",
+      "clearFilters": "Wyczyść filtry",
+      "filterByAction": "Filtruj po akcji"
+    },
+    "actions": {
+      "USER_REGISTERED": "Rejestracja użytkownika",
+      "EMAIL_VERIFIED": "Weryfikacja email",
+      "LOGIN_SUCCESS": "Logowanie",
+      "LOGIN_FAILED": "Błąd logowania",
+      "PASSWORD_RESET_REQUESTED": "Żądanie resetu hasła",
+      "PASSWORD_RESET_COMPLETED": "Reset hasła",
+      "REFRESH_TOKEN_ROTATED": "Odświeżenie tokenu",
+      "TOKEN_FAMILY_REVOKED": "Unieważnienie tokenów",
+      "LOGOUT": "Wylogowanie",
+      "LOGOUT_ALL": "Wylogowanie wszędzie",
+      "PROPERTY_CREATED": "Dodano nieruchomość",
+      "PROPERTY_UPDATED": "Zaktualizowano nieruchomość",
+      "PROPERTY_DELETED": "Usunięto nieruchomość",
+      "PROPERTY_ACCESSED_BY_ADMIN": "Admin uzyskał dostęp",
+      "METER_CREATED": "Dodano licznik",
+      "METER_REPLACED": "Wymieniono licznik",
+      "METER_READING_RECORDED": "Zapisano odczyt",
+      "TENANT_CREATED": "Dodano najemcę",
+      "TENANT_ASSIGNED": "Przypisano najemcę",
+      "TENANT_REMOVED": "Usunięto najemcę",
+      "CONTRACT_CREATED": "Dodano umowę",
+      "CONTRACT_TERMINATED": "Rozwiązano umowę",
+      "TARIFF_CREATED": "Dodano taryfę",
+      "FIXED_COST_CREATED": "Dodano koszt stały",
+      "FIXED_COST_CHANGED": "Zmieniono koszt stały",
+      "PROFITABILITY_CALCULATED": "Obliczono rentowność",
+      "ADMIN_USER_VIEWED": "Admin przeglądał użytkownika",
+      "ADMIN_PROPERTY_ACCESSED": "Admin uzyskał dostęp do nieruchomości",
+      "ADMIN_RATE_LIMIT_RESET": "Reset limitu zapytań",
+      "RATE_LIMIT_VIOLATED": "Przekroczono limit zapytań",
+      "UNAUTHORIZED_ACCESS_ATTEMPT": "Próba nieautoryzowanego dostępu"
+    }
+  }
+}

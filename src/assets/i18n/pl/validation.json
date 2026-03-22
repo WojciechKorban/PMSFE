@@ -1,0 +1,17 @@
+{
+  "validation": {
+    "required": "To pole jest wymagane.",
+    "email": "Wpisz prawidłowy adres e-mail.",
+    "minlength": "Wymagane minimum {{requiredLength}} znaków.",
+    "maxlength": "Maksymalnie {{requiredLength}} znaków.",
+    "min": "Minimalna wartość to {{min}}.",
+    "max": "Maksymalna wartość to {{max}}.",
+    "pattern": "Nieprawidłowy format.",
+    "passwordMismatch": "Hasła nie są identyczne.",
+    "passwordStrength": "Hasło musi zawierać co najmniej jedną dużą literę, jedną małą literę, jedną cyfrę i jeden znak specjalny.",
+    "dateRange": "Data końcowa musi być późniejsza niż data początkowa.",
+    "futureDate": "Data musi być w przyszłości.",
+    "readingValue": "Odczyt musi być większy lub równy poprzedniemu odczytowi ({{previousValue}}).",
+    "maxPeriodDays": "Okres nie może przekraczać {{maxDays}} dni."
+  }
+}

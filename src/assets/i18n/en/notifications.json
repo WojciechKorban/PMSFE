@@ -1,0 +1,111 @@
+{
+  "notifications": {
+    "preferences": {
+      "title": "Notification Preferences",
+      "email": "Email Notifications",
+      "enableEmail": "Enable email notifications",
+      "leaseExpiry": "Lease Expiry Warning",
+      "warningDays": "Days before expiry",
+      "warningDaysHint": "1–90 days before lease end date",
+      "meterReading": "Meter Reading Reminder",
+      "reminderDay": "Day of month",
+      "dayHint": "Day of month (1–28)",
+      "profitabilityReport": "Monthly Profitability Report",
+      "enableProfitability": "Enable monthly report",
+      "reportDay": "Report day of month",
+      "saved": "Preferences saved"
+    },
+    "history": {
+      "title": "Notification History",
+      "empty": "No notifications sent yet",
+      "status": "Status",
+      "template": "Type",
+      "subject": "Subject",
+      "sentAt": "Sent At"
+    },
+    "status": {
+      "SENT": "Sent",
+      "FAILED": "Failed",
+      "PENDING": "Pending",
+      "SKIPPED": "Skipped"
+    },
+    "template": {
+      "lease_expiry_warning": "Lease Expiry Warning",
+      "meter_reading_reminder": "Meter Reading Reminder",
+      "profitability_report": "Profitability Report"
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Language Settings",
+      "subtitle": "Choose your preferred interface language.",
+      "changed": "Language changed successfully"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "nav": {
+      "users": "Users",
+      "properties": "Properties",
+      "auditLog": "Audit Log"
+    },
+    "health": {
+      "title": "System Health",
+      "pendingEvents": "Pending Outbox Events",
+      "failedEvents": "Failed Outbox Events",
+      "totalUsers": "Total Users",
+      "totalProperties": "Total Properties",
+      "failedWarning": "There are failed outbox events that may need attention."
+    },
+    "users": {
+      "title": "Users",
+      "email": "Email",
+      "roles": "Roles",
+      "properties": "Properties",
+      "createdAt": "Registered",
+      "deleted": "Deleted"
+    },
+    "auditLog": {
+      "title": "Audit Log",
+      "action": "Action",
+      "entityType": "Entity",
+      "user": "User",
+      "timestamp": "Time",
+      "clearFilters": "Clear Filters",
+      "filterByAction": "Filter by action"
+    },
+    "actions": {
+      "USER_REGISTERED": "User Registered",
+      "EMAIL_VERIFIED": "Email Verified",
+      "LOGIN_SUCCESS": "Login Success",
+      "LOGIN_FAILED": "Login Failed",
+      "PASSWORD_RESET_REQUESTED": "Password Reset Requested",
+      "PASSWORD_RESET_COMPLETED": "Password Reset Completed",
+      "REFRESH_TOKEN_ROTATED": "Token Refreshed",
+      "TOKEN_FAMILY_REVOKED": "Token Family Revoked",
+      "LOGOUT": "Logout",
+      "LOGOUT_ALL": "Logout All",
+      "PROPERTY_CREATED": "Property Created",
+      "PROPERTY_UPDATED": "Property Updated",
+      "PROPERTY_DELETED": "Property Deleted",
+      "PROPERTY_ACCESSED_BY_ADMIN": "Property Accessed by Admin",
+      "METER_CREATED": "Meter Created",
+      "METER_REPLACED": "Meter Replaced",
+      "METER_READING_RECORDED": "Reading Recorded",
+      "TENANT_CREATED": "Tenant Created",
+      "TENANT_ASSIGNED": "Tenant Assigned",
+      "TENANT_REMOVED": "Tenant Removed",
+      "CONTRACT_CREATED": "Contract Created",
+      "CONTRACT_TERMINATED": "Contract Terminated",
+      "TARIFF_CREATED": "Tariff Created",
+      "FIXED_COST_CREATED": "Fixed Cost Created",
+      "FIXED_COST_CHANGED": "Fixed Cost Changed",
+      "PROFITABILITY_CALCULATED": "Profitability Calculated",
+      "ADMIN_USER_VIEWED": "Admin Viewed User",
+      "ADMIN_PROPERTY_ACCESSED": "Admin Accessed Property",
+      "ADMIN_RATE_LIMIT_RESET": "Rate Limit Reset",
+      "RATE_LIMIT_VIOLATED": "Rate Limit Violated",
+      "UNAUTHORIZED_ACCESS_ATTEMPT": "Unauthorized Access Attempt"
+    }
+  }
+}

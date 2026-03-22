@@ -1,0 +1,51 @@
+{
+  "hub": {
+    "title": "Reports",
+    "csv": {
+      "title": "Meter Readings CSV",
+      "description": "Download meter readings as a CSV file for a selected date range.",
+      "action": "Download CSV"
+    },
+    "pdf": {
+      "title": "Profitability PDF",
+      "description": "Generate a profitability summary as a PDF report.",
+      "action": "Generate PDF"
+    },
+    "async": {
+      "title": "Async Report",
+      "description": "Request a large report for background processing. You'll get a download link when it's ready.",
+      "action": "Request Report"
+    }
+  },
+  "csv": {
+    "title": "Download Meter Readings CSV",
+    "property": "Property",
+    "from": "From Date",
+    "to": "To Date",
+    "download": "Download CSV",
+    "downloading": "Downloading...",
+    "success": "CSV downloaded successfully",
+    "error": "Failed to download CSV"
+  },
+  "async": {
+    "title": "Async Report",
+    "property": "Property",
+    "reportType": "Report Type",
+    "from": "From Date",
+    "to": "To Date",
+    "submit": "Request Report",
+    "status": {
+      "PENDING": "Pending...",
+      "PROCESSING": "Generating report...",
+      "COMPLETE": "Report ready",
+      "FAILED": "Report generation failed"
+    },
+    "download": "Download Report",
+    "types": {
+      "PROFITABILITY_SUMMARY": "Profitability Summary",
+      "METER_READINGS_CSV": "Meter Readings CSV",
+      "PROFITABILITY_COMPARISON": "Profitability Comparison",
+      "ANNUAL_SUMMARY": "Annual Summary"
+    }
+  }
+}

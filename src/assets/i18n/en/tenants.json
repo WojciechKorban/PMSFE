@@ -1,0 +1,33 @@
+{
+  "tenants": {
+    "title": "Tenants",
+    "addTenant": "Add Tenant",
+    "empty": "No tenants found",
+    "search": "Search by name or email",
+    "form": {
+      "createTitle": "Add Tenant",
+      "editTitle": "Edit Tenant",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "notes": "Notes"
+    },
+    "detail": {
+      "title": "Tenant Details",
+      "occupancy": "Occupancy History"
+    },
+    "occupancy": {
+      "assignTitle": "Assign Tenant",
+      "selectTenant": "Select Tenant",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "assign": "Assign",
+      "remove": "Remove from Property",
+      "removeConfirmTitle": "Remove Tenant",
+      "removeConfirmMessage": "Remove this tenant from property?",
+      "active": "Currently active",
+      "inactive": "Past occupancy"
+    }
+  }
+}

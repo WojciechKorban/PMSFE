@@ -1,0 +1,42 @@
+{
+  "contracts": {
+    "title": "Umowy",
+    "addContract": "Dodaj umowę",
+    "empty": "Brak umów",
+    "status": {
+      "ACTIVE": "Aktywna",
+      "TERMINATED": "Rozwiązana",
+      "EXPIRED": "Wygasła"
+    },
+    "form": {
+      "createTitle": "Nowa umowa",
+      "tenant": "Najemca",
+      "startDate": "Data rozpoczęcia",
+      "endDate": "Data zakończenia",
+      "openEnded": "Umowa bezterminowa",
+      "monthlyAmount": "Kwota miesięczna",
+      "currency": "Waluta",
+      "notes": "Uwagi"
+    },
+    "detail": {
+      "title": "Szczegóły umowy",
+      "dates": "Okres trwania",
+      "amount": "Kwota miesięczna",
+      "documents": "Dokumenty"
+    },
+    "terminate": {
+      "button": "Rozwiąż umowę",
+      "dialogTitle": "Rozwiązanie umowy",
+      "reason": "Powód (opcjonalnie)",
+      "confirm": "Rozwiąż",
+      "warning": "Tej operacji nie można cofnąć."
+    },
+    "documents": {
+      "upload": "Wgraj dokument",
+      "download": "Pobierz",
+      "size": "Rozmiar",
+      "uploadedAt": "Wgrano",
+      "empty": "Brak załączonych dokumentów"
+    }
+  }
+}

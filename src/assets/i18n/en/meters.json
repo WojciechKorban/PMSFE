@@ -1,0 +1,68 @@
+{
+  "meters": {
+    "title": "Meters",
+    "addMeter": "Add Meter",
+    "empty": "No meters added yet",
+    "noReadings": "No readings yet",
+    "latestReading": "Latest reading",
+    "replace": "Replace Meter",
+    "filter": {
+      "utilityType": "Filter by type"
+    },
+    "utilityType": {
+      "ELECTRICITY": "Electricity",
+      "GAS": "Gas",
+      "WATER": "Water",
+      "HEAT": "Heat",
+      "OTHER": "Other"
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "REPLACED": "Replaced",
+      "DECOMMISSIONED": "Decommissioned"
+    },
+    "form": {
+      "createTitle": "Add Meter",
+      "editTitle": "Edit Meter",
+      "utilityType": "Utility Type",
+      "serialNumber": "Serial Number",
+      "unit": "Unit",
+      "installationDate": "Installation Date",
+      "notes": "Notes"
+    },
+    "readings": {
+      "addReading": "Add Reading",
+      "date": "Reading Date",
+      "value": "Value",
+      "notes": "Notes",
+      "save": "Save Reading",
+      "empty": "No readings recorded"
+    },
+    "photos": {
+      "upload": "Upload Photo",
+      "attachPhoto": "Attach Photo",
+      "delete": "Delete Photo"
+    },
+    "tabs": {
+      "readings": "Readings",
+      "info": "Info"
+    },
+    "replacement": {
+      "title": "Replace Meter",
+      "newSerialNumber": "New Serial Number",
+      "replacementDate": "Replacement Date",
+      "oldFinalReading": "Old Meter Final Reading",
+      "newInitialReading": "New Meter Initial Reading",
+      "reason": "Reason (optional)",
+      "confirm": "Confirm Replacement"
+    }
+  },
+  "tariffs": {
+    "title": "Tariffs",
+    "addTariff": "Add Tariff",
+    "empty": "No tariffs configured",
+    "pricePerUnit": "Price per Unit",
+    "currency": "Currency",
+    "validFrom": "Valid From"
+  }
+}

@@ -1,0 +1,105 @@
+##################################
+# GLOBAL
+##################################
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+####################ą##############
+# IDE
+##################################
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+##################################
+# JAVA / BACKEND (Spring / Maven / Gradle)
+##################################
+
+# Compiled files
+*.class
+
+# Logs
+logs/
+*.log
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+
+# Generated files
+dependency-reduced-pom.xml
+
+##################################
+# NODE / ANGULAR FRONTEND
+##################################
+
+# Node modules
+node_modules/
+
+# Angular build
+dist/
+.tmp/
+out-tsc/
+
+# Angular cache
+.angular/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+src/environments/*.local.ts
+src/environments/*.prod.ts
+
+##################################
+# TESTY
+##################################
+coverage/
+*.lcov
+
+##################################
+# SYSTEM
+##################################
+.env
+.env.local
+.env.*.local
+
+##################################
+# DOCKER (opcjonalnie)
+##################################
+docker-compose.override.yml
+
+##################################
+# OS
+##################################
+*.bak
+*.orig
+/.gradle/
