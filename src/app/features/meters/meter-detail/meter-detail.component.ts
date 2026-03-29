@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { rxResource } from '@angular/core/rxjs-interop';
@@ -57,7 +57,7 @@ import { ReadingFormComponent } from '../reading-form/reading-form.component';
               <app-reading-form
                 [propertyId]="propertyId()"
                 [meterId]="meterId()"
-                [unit]="meterResource.value()!.unit"
+                [unit]="meterUnit()"
                 (readingAdded)="onReadingAdded()"
               />
               <mat-divider></mat-divider>
@@ -68,7 +68,7 @@ import { ReadingFormComponent } from '../reading-form/reading-form.component';
                   @for (reading of readingsResource.value() ?? []; track reading.id) {
                     <div class="reading-item">
                       <span class="reading-date">{{ reading.readingDate | date:'dd.MM.yyyy' }}</span>
-                      <span class="reading-value">{{ reading.value }} {{ meterResource.value()!.unit }}</span>
+                      <span class="reading-value">{{ reading.readingValue }} {{ meterUnit() }}</span>
                       @if (reading.notes) {
                         <span class="reading-notes">{{ reading.notes }}</span>
                       }
@@ -84,7 +84,7 @@ import { ReadingFormComponent } from '../reading-form/reading-form.component';
             <div class="tab-content info-grid">
               <div class="info-item">
                 <span class="label">{{ 'meters.form.unit' | transloco }}</span>
-                <span>{{ meterResource.value()!.unit }}</span>
+                <span>{{ meterUnit() }}</span>
               </div>
               @if (meterResource.value()!.installationDate) {
                 <div class="info-item">
@@ -92,10 +92,10 @@ import { ReadingFormComponent } from '../reading-form/reading-form.component';
                   <span>{{ meterResource.value()!.installationDate | date:'dd.MM.yyyy' }}</span>
                 </div>
               }
-              @if (meterResource.value()!.notes) {
+              @if (meterResource.value()!.description) {
                 <div class="info-item">
                   <span class="label">{{ 'meters.form.notes' | transloco }}</span>
-                  <span>{{ meterResource.value()!.notes }}</span>
+                  <span>{{ meterResource.value()!.description }}</span>
                 </div>
               }
             </div>
@@ -129,6 +129,13 @@ export class MeterDetailComponent implements OnInit {
 
   propertyId = signal('');
   meterId = signal('');
+
+  meterUnit = computed(() => {
+    const units: Record<string, string> = {
+      ELECTRICITY: 'kWh', GAS: 'm³', WATER_COLD: 'm³', WATER_HOT: 'm³', HEAT: 'GJ',
+    };
+    return units[this.meterResource.value()?.utilityType ?? ''] ?? '';
+  });
 
   meterResource = rxResource({
     params: () => ({ propertyId: this.propertyId(), meterId: this.meterId() }),

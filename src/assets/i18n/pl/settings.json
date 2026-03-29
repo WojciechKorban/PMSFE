@@ -3,7 +3,7 @@
     "title": "Ustawienia profilu",
     "email": "Adres e-mail",
     "roles": "Role",
-    "editNote": "Edycja profilu (zmiana nazwy, adresu e-mail) nie jest dostępna w V1. Skontaktuj się z pomocą techniczną.",
+    "editNote": "Edycja profilu nie jest dostępna w V1.",
     "roleLabel": {
       "ROLE_USER": "Użytkownik",
       "ROLE_ADMIN": "Administrator"
@@ -11,5 +11,60 @@
   },
   "language": {
     "title": "Ustawienia języka"
+  },
+  "settings": {
+    "tabs": {
+      "profile": "Profil",
+      "security": "Bezpieczeństwo",
+      "language": "Język i region",
+      "notifications": "Powiadomienia",
+      "billing": "Plan i rozliczenia"
+    },
+    "comingSoon": "Wkrótce",
+    "language": {
+      "title": "Język i region",
+      "description": "Wybierz język wyświetlania aplikacji.",
+      "changed": "Język zmieniony",
+      "note": "Zmiana języka dotyczy całej aplikacji."
+    },
+    "profile": {
+      "title": "Dane osobowe",
+      "preferencesTitle": "Preferencje",
+      "changePhoto": "Zmień zdjęcie",
+      "nameLabel": "Imię i nazwisko",
+      "emailLabel": "Adres email",
+      "emailVerified": "Zweryfikowany",
+      "phoneLabel": "Telefon",
+      "currencyLabel": "Waluta",
+      "dateFormatLabel": "Format daty",
+      "timezoneLabel": "Strefa czasowa",
+      "saveButton": "Zapisz zmiany",
+      "saveSuccess": "Dane zostały zaktualizowane.",
+      "accountStats": "Stan konta",
+      "plan": "Plan",
+      "storage": "Przestrzeń",
+      "properties": "Nieruchomości",
+      "upgradePlan": "Ulepsz plan",
+      "activity": "Aktywność",
+      "lastLogin": "Ostatnie logowanie",
+      "ipAddress": "Adres IP",
+      "device": "Urządzenie"
+    },
+    "security": {
+      "title": "Bezpieczeństwo",
+      "changePassword": "Zmiana hasła",
+      "currentPassword": "Aktualne hasło",
+      "newPassword": "Nowe hasło",
+      "confirmPassword": "Potwierdź hasło",
+      "savePassword": "Zmień hasło",
+      "activeSessions": "Aktywne sesje",
+      "device": "Urządzenie",
+      "lastActive": "Ostatnia aktywność",
+      "ipAddress": "Adres IP",
+      "revokeSession": "Wyloguj",
+      "logoutAllButton": "Wyloguj ze wszystkich",
+      "logoutAllConfirm": "Wylogować ze wszystkich urządzeń?",
+      "passwordChanged": "Hasło zostało zmienione."
+    }
   }
 }

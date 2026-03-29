@@ -38,7 +38,7 @@ import { TenantService } from '../../tenants/services/tenant.service';
           <mat-label>{{ 'contracts.form.tenant' | transloco }}</mat-label>
           <mat-select formControlName="tenantId">
             @for (t of tenantsResource.value() ?? []; track t.id) {
-              <mat-option [value]="t.id">{{ t.firstName }} {{ t.lastName }}</mat-option>
+              <mat-option [value]="t.id">{{ t.name }}</mat-option>
             }
           </mat-select>
         </mat-form-field>

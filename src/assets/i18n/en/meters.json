@@ -13,22 +13,93 @@
       "ELECTRICITY": "Electricity",
       "GAS": "Gas",
       "WATER": "Water",
+      "WATER_COLD": "Cold Water",
+      "WATER_HOT": "Hot Water",
       "HEAT": "Heat",
       "OTHER": "Other"
+    },
+    "utilityTypes": {
+      "electricity": "Electricity",
+      "gas": "Gas",
+      "waterCold": "Cold Water",
+      "waterHot": "Hot Water",
+      "heat": "Heat"
     },
     "status": {
       "ACTIVE": "Active",
       "REPLACED": "Replaced",
       "DECOMMISSIONED": "Decommissioned"
     },
+    "list": {
+      "title": "Meters",
+      "subtitle": "Manage meters and readings",
+      "addButton": "Add Meter",
+      "selectProperty": "Select property"
+    },
+    "tabs": {
+      "overview": "Meter Overview",
+      "history": "Reading History",
+      "readings": "Readings",
+      "info": "Info"
+    },
+    "alerts": {
+      "overdueReadings": "meters require a reading",
+      "viewOverdue": "View"
+    },
+    "card": {
+      "serialNumber": "Serial No.",
+      "lastReading": "Last reading",
+      "noReadings": "No readings",
+      "sincePrevious": "since previous",
+      "addReading": "Add reading",
+      "history": "History",
+      "replace": "Replace meter"
+    },
+    "reading": {
+      "title": "Add Reading",
+      "previous": "Previous reading",
+      "valueLabel": "Reading value",
+      "dateLabel": "Reading date",
+      "notesLabel": "Notes",
+      "notesPlaceholder": "Optional notes...",
+      "photoLabel": "Meter photo",
+      "photoHint": "Tap to take a photo or drag a file",
+      "uploading": "Uploading",
+      "submitButton": "Save reading",
+      "consumption": "since previous reading",
+      "successTitle": "Reading saved!",
+      "successMessage": "Data has been updated."
+    },
     "form": {
       "createTitle": "Add Meter",
       "editTitle": "Edit Meter",
+      "addTitle": "Add Meter",
       "utilityType": "Utility Type",
+      "utilityTypeLabel": "Utility Type",
       "serialNumber": "Serial Number",
+      "serialNumberLabel": "Serial Number",
       "unit": "Unit",
       "installationDate": "Installation Date",
-      "notes": "Notes"
+      "installDateLabel": "Installation Date",
+      "initialReadingLabel": "Initial Reading",
+      "descriptionLabel": "Description",
+      "notes": "Notes",
+      "addSuccess": "Meter has been added."
+    },
+    "replacement": {
+      "title": "Replace Meter",
+      "newSerialNumber": "New Serial Number",
+      "replacementDate": "Replacement Date",
+      "replacementDateLabel": "Replacement Date",
+      "oldFinalReading": "Old Meter Final Reading",
+      "oldFinalReadingLabel": "Old Meter Final Reading",
+      "newInitialReading": "New Meter Initial Reading",
+      "newInitialReadingLabel": "New Meter Initial Reading",
+      "newSerialLabel": "New Serial Number",
+      "reason": "Reason (optional)",
+      "reasonLabel": "Replacement Reason",
+      "confirm": "Confirm Replacement",
+      "success": "Meter has been replaced."
     },
     "readings": {
       "addReading": "Add Reading",
@@ -43,18 +114,29 @@
       "attachPhoto": "Attach Photo",
       "delete": "Delete Photo"
     },
-    "tabs": {
-      "readings": "Readings",
-      "info": "Info"
+    "empty": {
+      "title": "No meters",
+      "description": "Add the first meter for this property.",
+      "cta": "Add Meter"
     },
-    "replacement": {
-      "title": "Replace Meter",
-      "newSerialNumber": "New Serial Number",
-      "replacementDate": "Replacement Date",
-      "oldFinalReading": "Old Meter Final Reading",
-      "newInitialReading": "New Meter Initial Reading",
-      "reason": "Reason (optional)",
-      "confirm": "Confirm Replacement"
+    "errors": {
+      "readingTooLow": "Value must be greater than or equal to the previous reading",
+      "activeAlreadyExists": "An active meter of this type already exists."
+    },
+    "history": {
+      "filterMeter": "Meter",
+      "filterPeriod": "Period",
+      "allMeters": "All meters",
+      "columns": {
+        "date": "Date",
+        "value": "Value",
+        "consumption": "Consumption",
+        "delta": "Δ from previous",
+        "photo": "Photo",
+        "actions": "Actions"
+      },
+      "noPhoto": "No photo",
+      "viewPhoto": "View photo"
     }
   },
   "tariffs": {

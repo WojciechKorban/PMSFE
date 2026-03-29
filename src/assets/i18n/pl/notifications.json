@@ -1,4 +1,16 @@
 {
+  "preferences": {
+    "title": "Preferencje powiadomień",
+    "emailEnabled": "Powiadomienia email",
+    "leaseExpiryDays": "Ostrzeżenie o wygaśnięciu umów",
+    "leaseExpiryDaysHint": "Ile dni przed wygaśnięciem",
+    "meterReminderDay": "Przypomnienie o odczycie licznika",
+    "meterReminderDayHint": "Dzień miesiąca",
+    "profitabilityReport": "Miesięczny raport rentowności",
+    "reportDay": "Dzień wysyłki raportu",
+    "saveButton": "Zapisz preferencje",
+    "saveSuccess": "Preferencje zostały zapisane."
+  },
   "notifications": {
     "preferences": {
       "title": "Preferencje powiadomień",

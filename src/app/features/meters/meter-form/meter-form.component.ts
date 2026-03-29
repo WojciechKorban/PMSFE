@@ -54,11 +54,6 @@ import { UtilityType } from '../models/meter.models';
 
           @if (!isEdit()) {
             <mat-form-field appearance="outline">
-              <mat-label>{{ 'meters.form.unit' | transloco }}</mat-label>
-              <input matInput formControlName="unit" placeholder="kWh, m³, GJ" />
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
               <mat-label>{{ 'meters.form.installationDate' | transloco }}</mat-label>
               <input matInput [matDatepicker]="picker" formControlName="installationDate" />
               <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -106,12 +101,11 @@ export class MeterFormComponent implements OnInit {
   isEdit = signal(false);
   saving = signal(false);
 
-  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER', 'HEAT', 'OTHER'];
+  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER_COLD', 'WATER_HOT', 'HEAT'];
 
   form = this.fb.group({
     utilityType: ['ELECTRICITY' as UtilityType, Validators.required],
     serialNumber: ['', Validators.required],
-    unit: ['', Validators.required],
     installationDate: [null as Date | null],
     notes: ['']
   });
@@ -129,7 +123,7 @@ export class MeterFormComponent implements OnInit {
       const meter = this.meterResource.value();
       if (meter) {
         this.form.controls['serialNumber'].setValue(meter.serialNumber);
-        this.form.controls['notes'].setValue(meter.notes ?? '');
+        this.form.controls['notes'].setValue(meter.description ?? '');
       }
     });
   }
@@ -154,16 +148,15 @@ export class MeterFormComponent implements OnInit {
     const obs = this.isEdit()
       ? this.meterService.update(pid, this.meterId()!, {
           serialNumber: val.serialNumber!,
-          notes: val.notes ?? undefined
+          description: val.notes ?? undefined
         })
       : this.meterService.create(pid, {
           utilityType: val.utilityType as UtilityType,
           serialNumber: val.serialNumber!,
-          unit: val.unit!,
           installationDate: val.installationDate
             ? (val.installationDate as Date).toISOString().split('T')[0]
             : undefined,
-          notes: val.notes ?? undefined
+          description: val.notes ?? undefined
         });
 
     obs.subscribe({

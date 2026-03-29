@@ -11,11 +11,43 @@
       "lastName": "Last Name",
       "email": "Email",
       "phone": "Phone",
-      "notes": "Notes"
+      "notes": "Notes",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+48 600 000 000",
+      "saveSuccess": "Tenant has been saved."
+    },
+    "list": {
+      "title": "Tenants",
+      "subtitle": "List of all tenants",
+      "addButton": "Add Tenant",
+      "searchPlaceholder": "Search tenant..."
+    },
+    "filters": {
+      "allStatuses": "All statuses",
+      "allProperties": "All properties"
+    },
+    "table": {
+      "name": "Tenant",
+      "contact": "Contact",
+      "property": "Property",
+      "period": "Rental period",
+      "status": "Status"
+    },
+    "timeline": {
+      "present": "present",
+      "current": "Current"
     },
     "detail": {
       "title": "Tenant Details",
-      "occupancy": "Occupancy History"
+      "occupancy": "Occupancy History",
+      "contactTitle": "Contact Details",
+      "historyTitle": "Rental History",
+      "documentsTitle": "Documents",
+      "noDocuments": "No documents",
+      "editButton": "Edit Tenant",
+      "deleteButton": "Delete Tenant"
     },
     "occupancy": {
       "assignTitle": "Assign Tenant",
@@ -28,6 +60,14 @@
       "removeConfirmMessage": "Remove this tenant from property?",
       "active": "Currently active",
       "inactive": "Past occupancy"
+    },
+    "empty": {
+      "title": "No tenants",
+      "description": "Add the first tenant.",
+      "cta": "Add Tenant"
+    },
+    "errors": {
+      "notFound": "Tenant not found."
     }
   }
 }

@@ -13,22 +13,93 @@
       "ELECTRICITY": "Prąd",
       "GAS": "Gaz",
       "WATER": "Woda",
+      "WATER_COLD": "Woda zimna",
+      "WATER_HOT": "Woda ciepła",
       "HEAT": "Ciepło",
       "OTHER": "Inne"
+    },
+    "utilityTypes": {
+      "electricity": "Energia elektryczna",
+      "gas": "Gaz",
+      "waterCold": "Woda zimna",
+      "waterHot": "Woda ciepła",
+      "heat": "Ciepło"
     },
     "status": {
       "ACTIVE": "Aktywny",
       "REPLACED": "Wymieniony",
       "DECOMMISSIONED": "Wycofany"
     },
+    "list": {
+      "title": "Liczniki",
+      "subtitle": "Zarządzaj licznikami i odczytami",
+      "addButton": "Dodaj licznik",
+      "selectProperty": "Wybierz nieruchomość"
+    },
+    "tabs": {
+      "overview": "Przegląd liczników",
+      "history": "Historia odczytów",
+      "readings": "Odczyty",
+      "info": "Informacje"
+    },
+    "alerts": {
+      "overdueReadings": "liczniki wymagają odczytu",
+      "viewOverdue": "Zobacz"
+    },
+    "card": {
+      "serialNumber": "Nr seryjny",
+      "lastReading": "Ostatni odczyt",
+      "noReadings": "Brak odczytów",
+      "sincePrevious": "od poprzedniego",
+      "addReading": "Dodaj odczyt",
+      "history": "Historia",
+      "replace": "Wymień licznik"
+    },
+    "reading": {
+      "title": "Dodaj odczyt",
+      "previous": "Poprzedni odczyt",
+      "valueLabel": "Wartość odczytu",
+      "dateLabel": "Data odczytu",
+      "notesLabel": "Uwagi",
+      "notesPlaceholder": "Opcjonalne uwagi...",
+      "photoLabel": "Zdjęcie licznika",
+      "photoHint": "Dotknij aby zrobić zdjęcie lub przeciągnij plik",
+      "uploading": "Wysyłanie",
+      "submitButton": "Zapisz odczyt",
+      "consumption": "od poprzedniego odczytu",
+      "successTitle": "Odczyt zapisany!",
+      "successMessage": "Dane zostały zaktualizowane."
+    },
     "form": {
       "createTitle": "Dodaj licznik",
       "editTitle": "Edytuj licznik",
+      "addTitle": "Dodaj licznik",
       "utilityType": "Typ medium",
+      "utilityTypeLabel": "Typ mediów",
       "serialNumber": "Numer seryjny",
+      "serialNumberLabel": "Numer seryjny",
       "unit": "Jednostka",
       "installationDate": "Data montażu",
-      "notes": "Uwagi"
+      "installDateLabel": "Data instalacji",
+      "initialReadingLabel": "Odczyt początkowy",
+      "descriptionLabel": "Opis",
+      "notes": "Uwagi",
+      "addSuccess": "Licznik został dodany."
+    },
+    "replacement": {
+      "title": "Wymień licznik",
+      "newSerialNumber": "Nowy numer seryjny",
+      "replacementDate": "Data wymiany",
+      "replacementDateLabel": "Data wymiany",
+      "oldFinalReading": "Końcowy odczyt starego licznika",
+      "oldFinalReadingLabel": "Końcowy odczyt starego licznika",
+      "newInitialReading": "Początkowy odczyt nowego licznika",
+      "newInitialReadingLabel": "Odczyt początkowy nowego licznika",
+      "newSerialLabel": "Nowy numer seryjny",
+      "reason": "Powód (opcjonalnie)",
+      "reasonLabel": "Powód wymiany",
+      "confirm": "Potwierdź wymianę",
+      "success": "Licznik został wymieniony."
     },
     "readings": {
       "addReading": "Dodaj odczyt",
@@ -43,18 +114,29 @@
       "attachPhoto": "Załącz zdjęcie",
       "delete": "Usuń zdjęcie"
     },
-    "tabs": {
-      "readings": "Odczyty",
-      "info": "Informacje"
+    "empty": {
+      "title": "Brak liczników",
+      "description": "Dodaj pierwszy licznik dla tej nieruchomości.",
+      "cta": "Dodaj licznik"
     },
-    "replacement": {
-      "title": "Wymiana licznika",
-      "newSerialNumber": "Nowy numer seryjny",
-      "replacementDate": "Data wymiany",
-      "oldFinalReading": "Końcowy odczyt starego licznika",
-      "newInitialReading": "Początkowy odczyt nowego licznika",
-      "reason": "Powód (opcjonalnie)",
-      "confirm": "Potwierdź wymianę"
+    "errors": {
+      "readingTooLow": "Wartość musi być większa lub równa poprzedniemu odczytowi",
+      "activeAlreadyExists": "Aktywny licznik tego typu już istnieje."
+    },
+    "history": {
+      "filterMeter": "Licznik",
+      "filterPeriod": "Okres",
+      "allMeters": "Wszystkie liczniki",
+      "columns": {
+        "date": "Data",
+        "value": "Wartość",
+        "consumption": "Zużycie",
+        "delta": "Δ od poprzedniego",
+        "photo": "Zdjęcie",
+        "actions": "Akcje"
+      },
+      "noPhoto": "Brak zdjęcia",
+      "viewPhoto": "Zobacz zdjęcie"
     }
   },
   "tariffs": {

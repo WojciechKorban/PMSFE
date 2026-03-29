@@ -3,6 +3,7 @@ import {
   provideRouter,
   withPreloading,
   withComponentInputBinding,
+  withViewTransitions,
   PreloadAllModules,
 } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
@@ -18,12 +19,15 @@ import { tokenRefreshInterceptor } from './core/http/token-refresh.interceptor';
 import { correlationIdInterceptor } from './core/http/correlation-id.interceptor';
 import { errorInterceptor } from './core/http/error.interceptor';
 import { loadingInterceptor } from './core/http/loading.interceptor';
+import { mockApiInterceptor } from './core/http/mock-api.interceptor';
+import { environment } from '../environments/environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZonelessChangeDetection(),
     provideHttpClient(
       withInterceptors([
+        ...(environment.useMockApi ? [mockApiInterceptor] : []),
         authInterceptor,
         tokenRefreshInterceptor,
         correlationIdInterceptor,
@@ -31,7 +35,7 @@ export const appConfig: ApplicationConfig = {
         loadingInterceptor,
       ])
     ),
-    provideRouter(appRoutes, withPreloading(PreloadAllModules), withComponentInputBinding()),
+    provideRouter(appRoutes, withPreloading(PreloadAllModules), withComponentInputBinding(), withViewTransitions()),
     provideAnimationsAsync(),
     provideNativeDateAdapter(),
     provideTransloco({

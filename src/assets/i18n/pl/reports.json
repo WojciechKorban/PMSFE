@@ -1,4 +1,56 @@
 {
+  "reports": {
+    "title": "Raporty",
+    "subtitle": "Eksportuj dane i analizy",
+    "quickExport": { "title": "Szybki eksport" },
+    "csv": {
+      "title": "Odczyty liczników (CSV)",
+      "description": "Eksportuj wszystkie odczyty liczników do pliku CSV. Kompatybilny z Excel.",
+      "downloadButton": "Pobierz CSV"
+    },
+    "pdf": {
+      "title": "Raport rentowności (PDF)",
+      "description": "Szczegółowy raport rentowności nieruchomości z podziałem na media i koszty.",
+      "downloadButton": "Pobierz PDF"
+    },
+    "comparison": {
+      "title": "Porównanie okresów (PDF)",
+      "description": "Porównaj rentowność w różnych okresach czasu.",
+      "periodsHint": "Wybierz okresy do porównania",
+      "generateButton": "Generuj porównanie"
+    },
+    "form": {
+      "property": "Nieruchomość",
+      "allProperties": "Wszystkie nieruchomości",
+      "from": "Od",
+      "to": "Do",
+      "month": "Miesiąc"
+    },
+    "async": {
+      "title": "Raporty w trakcie generowania",
+      "empty": "Brak raportów w kolejce."
+    },
+    "table": {
+      "type": "Typ",
+      "property": "Nieruchomość",
+      "period": "Okres",
+      "status": "Status",
+      "created": "Utworzono",
+      "actions": "Akcje"
+    },
+    "history": {
+      "title": "Pobrane raporty (ostatnie 30 dni)",
+      "expiryNote": "Raporty są dostępne przez 7 dni od wygenerowania.",
+      "downloaded": "Pobrano",
+      "redownload": "Pobierz ponownie"
+    },
+    "types": {
+      "PROFITABILITY_SUMMARY": "Raport rentowności PDF",
+      "METER_READINGS_CSV": "Odczyty CSV",
+      "PROFITABILITY_COMPARISON": "Porównanie PDF",
+      "ANNUAL_SUMMARY": "Podsumowanie roczne"
+    }
+  },
   "hub": {
     "title": "Raporty",
     "csv": {
@@ -13,7 +65,7 @@
     },
     "async": {
       "title": "Raport asynchroniczny",
-      "description": "Zlecenie raportu do przetwarzania w tle. Otrzymasz link do pobrania gdy będzie gotowy.",
+      "description": "Zlecenie raportu do przetwarzania w tle.",
       "action": "Zleć raport"
     }
   },

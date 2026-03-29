@@ -30,7 +30,7 @@ import { TenantService } from '../services/tenant.service';
           <mat-label>{{ 'tenants.occupancy.selectTenant' | transloco }}</mat-label>
           <mat-select formControlName="tenantId">
             @for (t of tenantsResource.value() ?? []; track t.id) {
-              <mat-option [value]="t.id">{{ t.firstName }} {{ t.lastName }}</mat-option>
+              <mat-option [value]="t.id">{{ t.name }}</mat-option>
             }
           </mat-select>
         </mat-form-field>
@@ -76,7 +76,7 @@ export class OccupancyAssignComponent {
     if (this.form.invalid) return;
     this.saving.set(true);
     const val = this.form.getRawValue();
-    this.tenantService.assign(this.propertyId(), val.tenantId!, {
+    this.tenantService.assignOccupancy(this.propertyId(), val.tenantId!, {
       startDate: (val.startDate as Date).toISOString().split('T')[0],
     }).subscribe({
       next: () => {

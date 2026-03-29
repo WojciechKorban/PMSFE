@@ -2,13 +2,23 @@
   "list": {
     "title": "Properties",
     "addButton": "Add property",
+    "subtitle": "{{count}} properties in portfolio",
     "emptyState": {
       "title": "No properties yet",
       "description": "Add your first property to get started.",
       "action": "Add property"
     },
-    "searchPlaceholder": "Search properties...",
-    "loadError": "Failed to load properties."
+    "searchPlaceholder": "Search by name, city or address...",
+    "loadError": "Failed to load properties.",
+    "noSearchResults": "No results found for your search."
+  },
+  "card": {
+    "profit": "Net profit (current month)",
+    "details": "Details",
+    "noData": "No data",
+    "statusComplete": "Complete",
+    "statusIncomplete": "Incomplete",
+    "statusNoData": "No data"
   },
   "detail": {
     "editButton": "Edit",

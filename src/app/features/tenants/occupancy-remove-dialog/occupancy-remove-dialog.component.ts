@@ -44,7 +44,7 @@ export class OccupancyRemoveDialogComponent {
 
   onConfirm(): void {
     this.removing.set(true);
-    this.tenantService.remove(this.data.propertyId, this.data.tenantId).subscribe({
+    this.tenantService.removeOccupancy(this.data.propertyId, this.data.tenantId).subscribe({
       next: result => this.dialogRef.close(result),
       error: () => {
         this.removing.set(false);

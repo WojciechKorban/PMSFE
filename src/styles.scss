@@ -1,5 +1,13 @@
 @use '@angular/material' as mat;
 
+/* ==========================================================================
+   DESIGN TOKENS — must be first so tokens are available for Material theme
+   ========================================================================== */
+@import 'assets/tokens.css';
+
+/* ==========================================================================
+   ANGULAR MATERIAL THEME
+   ========================================================================== */
 @include mat.elevation-classes();
 @include mat.app-background();
 
@@ -10,8 +18,8 @@ $theme: mat.define-theme((
     tertiary: mat.$blue-palette,
   ),
   typography: (
-    brand-family: 'Roboto, sans-serif',
-    plain-family: 'Roboto, sans-serif',
+    brand-family: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+    plain-family: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
   ),
   density: (
     scale: 0,
@@ -22,25 +30,6 @@ $theme: mat.define-theme((
   @include mat.all-component-themes($theme);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-}
-
-.success-snackbar {
-  --mdc-snackbar-container-color: #2e7d32;
-  --mdc-snackbar-supporting-text-color: white;
-}
-
-.error-snackbar {
-  --mdc-snackbar-container-color: #c62828;
-  --mdc-snackbar-supporting-text-color: white;
-}
-
 $dark-theme: mat.define-theme((
   color: (
     theme-type: dark,
@@ -48,20 +37,51 @@ $dark-theme: mat.define-theme((
     tertiary: mat.$blue-palette,
   ),
   typography: (
-    brand-family: 'Roboto, sans-serif',
-    plain-family: 'Roboto, sans-serif',
+    brand-family: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+    plain-family: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
   ),
   density: (
     scale: 0,
   ),
 ));
 
+/* ==========================================================================
+   CSS RESET
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   BASE BODY
+   ========================================================================== */
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================================================
+   DARK THEME — explicit class
+   ========================================================================== */
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   DARK THEME — OS preference
+   ========================================================================== */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     @include mat.all-component-colors($dark-theme);
   }
 
-  body {
+  body:not([data-theme="light"]) {
     color-scheme: dark;
   }
 
@@ -71,7 +91,95 @@ $dark-theme: mat.define-theme((
   }
 }
 
-.theme-dark {
-  @include mat.all-component-colors($dark-theme);
-  color-scheme: dark;
+/* ==========================================================================
+   ANGULAR MATERIAL OVERRIDES
+   ========================================================================== */
+
+/* Form fields — use design tokens */
+.mat-mdc-form-field {
+  .mat-mdc-text-field-wrapper {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Primary raised/flat buttons — 52px height to match mockup */
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-flat-button.mat-primary,
+button.mat-mdc-unelevated-button.mat-primary {
+  height: 52px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  border-radius: var(--radius-lg);
+}
+
+/* Global link styles */
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+    text-decoration: underline;
+  }
+}
+
+/* ==========================================================================
+   SNACKBAR OVERRIDES
+   ========================================================================== */
+.success-snackbar {
+  --mdc-snackbar-container-color: #16A34A;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: var(--color-error-600);
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+/* ==========================================================================
+   SKELETON LOADER
+   ========================================================================== */
+.skeleton-line {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-skeleton) 25%,
+    #d1d9e3 50%,
+    var(--color-bg-skeleton) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ==========================================================================
+   STAT CARD ENTRANCE ANIMATION
+   ========================================================================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   SIDENAV CONTAINER
+   ========================================================================== */
+.mat-drawer-container {
+  background: var(--color-bg-canvas) !important;
+}
+
+.mat-drawer {
+  background: var(--color-bg-sidebar) !important;
+  border-right: none !important;
 }

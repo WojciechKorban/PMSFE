@@ -45,7 +45,7 @@ import { TariffFormComponent } from '../tariff-form/tariff-form.component';
             <div class="tariff-info">
               <span class="utility-type">{{ ('meters.utilityType.' + tariff.utilityType) | transloco }}</span>
               <span class="price">{{ tariff.pricePerUnit | number:'1.2-4' }} {{ tariff.currency }}</span>
-              <span class="valid-from">{{ 'tariffs.validFrom' | transloco }}: {{ tariff.validFrom | date:'dd.MM.yyyy' }}</span>
+              <span class="valid-from">{{ 'tariffs.validFrom' | transloco }}: {{ tariff.effectiveFrom | date:'dd.MM.yyyy' }}</span>
             </div>
             <button mat-icon-button color="warn" (click)="deleteTariff(tariff.id)" [disabled]="deleting()">
               <mat-icon>delete</mat-icon>

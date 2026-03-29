@@ -1,27 +1,74 @@
-export type UtilityType = 'ELECTRICITY' | 'GAS' | 'WATER' | 'HEAT' | 'OTHER';
+export type UtilityType = 'ELECTRICITY' | 'GAS' | 'WATER_COLD' | 'WATER_HOT' | 'HEAT';
 export type MeterStatus = 'ACTIVE' | 'REPLACED' | 'DECOMMISSIONED';
+export type ReadingDataStatus = 'COMPLETE' | 'INCOMPLETE_DATA' | 'NO_DATA';
 
 export interface Meter {
   id: string;
   propertyId: string;
+  propertyAddress?: string;
   utilityType: UtilityType;
   serialNumber: string;
-  unit: string;
+  installationDate: string;
   status: MeterStatus;
-  installationDate: string | null;
-  notes: string | null;
-  latestReading: Reading | null;
-  createdAt: string;
+  description?: string;
+  daysSinceLastReading?: number;
+  lastReading?: MeterReading | null;
 }
 
-export interface Reading {
+export interface MeterReading {
   id: string;
   meterId: string;
   readingDate: string;
+  readingValue: number;
+  consumptionSincePrevious?: number;
+  consumptionDeltaPercent?: number;
+  photoAttached?: boolean;
+  notes?: string;
+  createdBy?: string;
+}
+
+export interface CreateMeterRequest {
+  utilityType: UtilityType;
+  serialNumber: string;
+  installationDate?: string;
+  initialReading?: number;
+  description?: string;
+}
+
+export interface SubmitReadingRequest {
+  readingValue: number;
+  readingDate: string;
+  notes?: string;
+}
+
+export interface ReplaceMeterRequest {
+  replacementDate: string;
+  oldFinalReading: number;
+  newSerialNumber: string;
+  newInitialReading: number;
+  reason?: string;
+}
+
+export interface ReadingFilter {
+  page?: number;
+  size?: number;
+  meterId?: string;
+}
+
+export interface PageResponse<T> {
+  content: T[];
+  totalElements: number;
+  totalPages: number;
+  number: number;
+  size: number;
+}
+
+// Legacy aliases for backward compat with pre-F3 stub components
+export type Reading = MeterReading;
+export interface CreateReadingRequest {
   value: number;
-  notes: string | null;
-  photos: Photo[];
-  createdAt: string;
+  readingDate: string;
+  notes?: string;
 }
 
 export interface Photo {
@@ -32,51 +79,30 @@ export interface Photo {
   uploadedAt: string;
 }
 
+export interface PresignedUrlResponse {
+  uploadUrl: string;
+  photoId: string;
+  key: string;
+}
+
 export interface Tariff {
   id: string;
-  propertyId: string;
   utilityType: UtilityType;
   pricePerUnit: number;
   currency: string;
-  validFrom: string;
-  createdAt: string;
-}
-
-export interface CreateMeterRequest {
-  utilityType: UtilityType;
-  serialNumber: string;
-  unit: string;
-  installationDate?: string;
-  notes?: string;
-}
-
-export interface UpdateMeterRequest {
-  serialNumber: string;
-  notes?: string;
-}
-
-export interface ReplaceMeterRequest {
-  newSerialNumber: string;
-  replacementDate: string;
-  oldFinalReading: number;
-  newInitialReading: number;
-  reason?: string;
-}
-
-export interface CreateReadingRequest {
-  readingDate: string;
-  value: number;
-  notes?: string;
+  effectiveFrom: string;
+  effectiveTo?: string | null;
 }
 
 export interface AddTariffRequest {
   utilityType: UtilityType;
   pricePerUnit: number;
   currency: string;
-  validFrom: string;
+  effectiveFrom: string;
+  effectiveTo?: string;
 }
 
-export interface PresignedUrlResponse {
-  uploadUrl: string;
-  photoId: string;
+export interface UpdateMeterRequest {
+  serialNumber?: string;
+  description?: string;
 }

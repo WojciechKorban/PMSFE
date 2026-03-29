@@ -33,12 +33,8 @@ import { TenantService } from '../services/tenant.service';
           <mat-card-content>
             <div class="info-grid">
               <div class="info-row">
-                <span class="label">{{ 'tenants.form.firstName' | transloco }}</span>
-                <span class="value">{{ tenant.firstName }}</span>
-              </div>
-              <div class="info-row">
-                <span class="label">{{ 'tenants.form.lastName' | transloco }}</span>
-                <span class="value">{{ tenant.lastName }}</span>
+                <span class="label">{{ 'tenants.form.name' | transloco }}</span>
+                <span class="value">{{ tenant.name }}</span>
               </div>
               <div class="info-row">
                 <span class="label">{{ 'tenants.form.email' | transloco }}</span>
@@ -48,12 +44,6 @@ import { TenantService } from '../services/tenant.service';
                 <span class="label">{{ 'tenants.form.phone' | transloco }}</span>
                 <span class="value">{{ tenant.phone ?? '—' }}</span>
               </div>
-              @if (tenant.notes) {
-                <div class="info-row">
-                  <span class="label">{{ 'tenants.form.notes' | transloco }}</span>
-                  <span class="value">{{ tenant.notes }}</span>
-                </div>
-              }
             </div>
           </mat-card-content>
           <mat-card-actions>

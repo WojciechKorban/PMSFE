@@ -1,4 +1,56 @@
 {
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Export data and analyses",
+    "quickExport": { "title": "Quick export" },
+    "csv": {
+      "title": "Meter readings (CSV)",
+      "description": "Export all meter readings to a CSV file. Compatible with Excel.",
+      "downloadButton": "Download CSV"
+    },
+    "pdf": {
+      "title": "Profitability report (PDF)",
+      "description": "Detailed profitability report with breakdown by utilities and costs.",
+      "downloadButton": "Download PDF"
+    },
+    "comparison": {
+      "title": "Period comparison (PDF)",
+      "description": "Compare profitability across different time periods.",
+      "periodsHint": "Select periods to compare",
+      "generateButton": "Generate comparison"
+    },
+    "form": {
+      "property": "Property",
+      "allProperties": "All properties",
+      "from": "From",
+      "to": "To",
+      "month": "Month"
+    },
+    "async": {
+      "title": "Reports being generated",
+      "empty": "No reports in queue."
+    },
+    "table": {
+      "type": "Type",
+      "property": "Property",
+      "period": "Period",
+      "status": "Status",
+      "created": "Created",
+      "actions": "Actions"
+    },
+    "history": {
+      "title": "Downloaded reports (last 30 days)",
+      "expiryNote": "Reports are available for 7 days after generation.",
+      "downloaded": "Downloaded",
+      "redownload": "Re-download"
+    },
+    "types": {
+      "PROFITABILITY_SUMMARY": "Profitability PDF",
+      "METER_READINGS_CSV": "Readings CSV",
+      "PROFITABILITY_COMPARISON": "Comparison PDF",
+      "ANNUAL_SUMMARY": "Annual summary"
+    }
+  },
   "hub": {
     "title": "Reports",
     "csv": {
@@ -13,7 +65,7 @@
     },
     "async": {
       "title": "Async Report",
-      "description": "Request a large report for background processing. You'll get a download link when it's ready.",
+      "description": "Request a large report for background processing.",
       "action": "Request Report"
     }
   },

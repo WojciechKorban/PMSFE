@@ -2,13 +2,23 @@
   "list": {
     "title": "Nieruchomości",
     "addButton": "Dodaj nieruchomość",
+    "subtitle": "{{count}} nieruchomości w portfelu",
     "emptyState": {
       "title": "Brak nieruchomości",
       "description": "Dodaj swoją pierwszą nieruchomość, aby rozpocząć.",
       "action": "Dodaj nieruchomość"
     },
-    "searchPlaceholder": "Szukaj nieruchomości...",
-    "loadError": "Nie udało się załadować nieruchomości."
+    "searchPlaceholder": "Szukaj po nazwie, mieście lub adresie...",
+    "loadError": "Nie udało się załadować nieruchomości.",
+    "noSearchResults": "Brak wyników dla podanego wyszukiwania."
+  },
+  "card": {
+    "profit": "Zysk netto (bieżący mies.)",
+    "details": "Szczegóły",
+    "noData": "Brak danych",
+    "statusComplete": "Kompletne",
+    "statusIncomplete": "Niekompletne",
+    "statusNoData": "Brak danych"
   },
   "detail": {
     "editButton": "Edytuj",

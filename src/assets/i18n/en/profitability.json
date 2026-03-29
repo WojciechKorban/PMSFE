@@ -1,4 +1,63 @@
 {
+  "profitability": {
+    "title": "Profitability",
+    "subtitle": "Financial analysis for your properties",
+    "selectProperty": "Select property",
+    "calculateButton": "Calculate profitability",
+    "recalculateButton": "Recalculate",
+    "recalculateSuccess": "Profitability has been recalculated.",
+    "summary": {
+      "contractIncome": "Contract Income",
+      "utilityCosts": "Utility Costs",
+      "fixedCosts": "Fixed Costs",
+      "grossProfit": "Gross Profit"
+    },
+    "period": {
+      "thisMonth": "This month",
+      "lastMonth": "Last month",
+      "lastQuarter": "Last quarter",
+      "custom": "Custom range",
+      "customRange": "Custom range",
+      "from": "From",
+      "to": "To"
+    },
+    "status": {
+      "complete": "Data complete",
+      "incompleteData": "Incomplete data",
+      "noReadings": "No readings",
+      "noContracts": "No contracts",
+      "calculationError": "Calculation error"
+    },
+    "stale": {
+      "message": "Data may be outdated.",
+      "lastCalculated": "Last calculated",
+      "refreshButton": "Recalculate"
+    },
+    "consumption": {
+      "title": "Utility consumption",
+      "utilityType": "Utility type",
+      "consumption": "Consumption",
+      "unitPrice": "Unit price",
+      "totalCost": "Total cost",
+      "status": "Status",
+      "total": "Total"
+    },
+    "chart": {
+      "title": "Monthly trend (last 8 months)",
+      "income": "Income",
+      "costs": "Costs",
+      "profit": "Profit"
+    },
+    "noData": {
+      "title": "No profitability data",
+      "description": "Add meter readings, set tariffs and create a contract to see profitability.",
+      "cta": "Calculate now"
+    },
+    "export": {
+      "pdf": "Download PDF",
+      "csv": "Download CSV"
+    }
+  },
   "fixedCosts": {
     "title": "Fixed Costs",
     "addCost": "Add Cost",
@@ -34,7 +93,7 @@
     },
     "async": {
       "title": "Background Report",
-      "hint": "Large reports are generated in the background. You will get a download link when ready.",
+      "hint": "Large reports are generated in the background.",
       "request": "Request Background Report",
       "pending": "Queued...",
       "processing": "Generating...",

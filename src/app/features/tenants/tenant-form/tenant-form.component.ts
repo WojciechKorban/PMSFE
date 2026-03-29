@@ -30,16 +30,10 @@ import { TenantService } from '../services/tenant.service';
         <div class="loading-center"><mat-spinner diameter="40"></mat-spinner></div>
       } @else {
         <form [formGroup]="form" (ngSubmit)="onSubmit()" class="tenant-form">
-          <div class="form-row">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ 'tenants.form.firstName' | transloco }}</mat-label>
-              <input matInput formControlName="firstName" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label>{{ 'tenants.form.lastName' | transloco }}</mat-label>
-              <input matInput formControlName="lastName" />
-            </mat-form-field>
-          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>{{ 'tenants.form.name' | transloco }}</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>{{ 'tenants.form.email' | transloco }}</mat-label>
             <input matInput type="email" formControlName="email" />
@@ -47,10 +41,6 @@ import { TenantService } from '../services/tenant.service';
           <mat-form-field appearance="outline">
             <mat-label>{{ 'tenants.form.phone' | transloco }}</mat-label>
             <input matInput formControlName="phone" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>{{ 'tenants.form.notes' | transloco }}</mat-label>
-            <textarea matInput formControlName="notes" rows="3"></textarea>
           </mat-form-field>
           <div class="form-actions">
             <button mat-stroked-button type="button" routerLink="/tenants">{{ 'common.cancel' | transloco }}</button>
@@ -70,7 +60,7 @@ import { TenantService } from '../services/tenant.service';
     .form-container { max-width: 600px; margin: 0 auto; padding: 16px; }
     .form-header { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
     .tenant-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
     .form-actions { display: flex; justify-content: flex-end; gap: 8px; }
     .loading-center { display: flex; justify-content: center; padding: 48px; }
   `],
@@ -86,11 +76,9 @@ export class TenantFormComponent implements OnInit {
   saving = signal(false);
 
   form = this.fb.group({
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
+    name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     phone: [''],
-    notes: [''],
   });
 
   tenantResource = rxResource({
@@ -103,11 +91,9 @@ export class TenantFormComponent implements OnInit {
       const tenant = this.tenantResource.value();
       if (tenant) {
         this.form.patchValue({
-          firstName: tenant.firstName,
-          lastName: tenant.lastName,
+          name: tenant.name,
           email: tenant.email,
           phone: tenant.phone ?? '',
-          notes: tenant.notes ?? '',
         });
       }
     });
@@ -126,11 +112,9 @@ export class TenantFormComponent implements OnInit {
     this.saving.set(true);
     const val = this.form.getRawValue();
     const data = {
-      firstName: val.firstName!,
-      lastName: val.lastName!,
+      name: val.name!,
       email: val.email!,
       phone: val.phone || undefined,
-      notes: val.notes || undefined,
     };
     const obs = this.isEdit()
       ? this.tenantService.update(this.tenantId()!, data)

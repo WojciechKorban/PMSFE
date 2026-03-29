@@ -1,4 +1,63 @@
 {
+  "profitability": {
+    "title": "Rentowność",
+    "subtitle": "Analiza finansowa nieruchomości",
+    "selectProperty": "Wybierz nieruchomość",
+    "calculateButton": "Oblicz rentowność",
+    "recalculateButton": "Przelicz ponownie",
+    "recalculateSuccess": "Rentowność została przeliczona.",
+    "summary": {
+      "contractIncome": "Przychód z umów",
+      "utilityCosts": "Koszty mediów",
+      "fixedCosts": "Koszty stałe",
+      "grossProfit": "Zysk brutto"
+    },
+    "period": {
+      "thisMonth": "Ten miesiąc",
+      "lastMonth": "Poprzedni miesiąc",
+      "lastQuarter": "Ostatni kwartał",
+      "custom": "Własny zakres",
+      "customRange": "Własny zakres",
+      "from": "Od",
+      "to": "Do"
+    },
+    "status": {
+      "complete": "Dane kompletne",
+      "incompleteData": "Niekompletne dane",
+      "noReadings": "Brak odczytów",
+      "noContracts": "Brak umów",
+      "calculationError": "Błąd obliczeń"
+    },
+    "stale": {
+      "message": "Dane mogą być nieaktualne.",
+      "lastCalculated": "Ostatnio obliczono",
+      "refreshButton": "Przelicz"
+    },
+    "consumption": {
+      "title": "Zużycie mediów",
+      "utilityType": "Typ mediów",
+      "consumption": "Zużycie",
+      "unitPrice": "Cena jednostkowa",
+      "totalCost": "Koszt",
+      "status": "Status",
+      "total": "Razem"
+    },
+    "chart": {
+      "title": "Trend miesięczny (ostatnie 8 miesięcy)",
+      "income": "Przychód",
+      "costs": "Koszty",
+      "profit": "Zysk"
+    },
+    "noData": {
+      "title": "Brak danych rentowności",
+      "description": "Dodaj odczyty liczników, ustaw taryfy i utwórz umowę, aby zobaczyć rentowność.",
+      "cta": "Oblicz teraz"
+    },
+    "export": {
+      "pdf": "Pobierz PDF",
+      "csv": "Pobierz CSV"
+    }
+  },
   "fixedCosts": {
     "title": "Koszty stałe",
     "addCost": "Dodaj koszt",
@@ -34,7 +93,7 @@
     },
     "async": {
       "title": "Raport w tle",
-      "hint": "Duże raporty są generowane w tle. Otrzymasz link do pobrania gdy będzie gotowy.",
+      "hint": "Duże raporty są generowane w tle.",
       "request": "Wygeneruj raport w tle",
       "pending": "W kolejce...",
       "processing": "Generowanie...",

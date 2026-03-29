@@ -225,46 +225,39 @@ export const appRoutes: Routes = [
       },
       {
         path: 'reports',
-        children: [
-          {
-            path: '',
-            loadComponent: () =>
-              import('./features/reports/report-hub/report-hub.component').then(
-                m => m.ReportHubComponent
-              ),
-          },
-          {
-            path: 'meter-readings',
-            loadComponent: () =>
-              import('./features/reports/csv-download/csv-download.component').then(
-                m => m.CsvDownloadComponent
-              ),
-          },
-          {
-            path: 'async',
-            loadComponent: () =>
-              import('./features/reports/async-report/async-report.component').then(
-                m => m.AsyncReportComponent
-              ),
-          },
-        ],
+        loadComponent: () =>
+          import('./features/reports/reports-page.component').then(m => m.ReportsPageComponent),
+      },
+      {
+        path: 'profitability',
+        loadComponent: () =>
+          import('./features/profitability/profitability-page.component').then(m => m.ProfitabilityPageComponent),
       },
       {
         path: 'settings',
+        loadComponent: () =>
+          import('./features/settings/settings-page.component').then(m => m.SettingsPageComponent),
         children: [
-          {
-            path: 'language',
-            loadComponent: () =>
-              import('./features/settings/language-settings/language-settings.component').then(
-                m => m.LanguageSettingsComponent
-              ),
-          },
+          { path: '', redirectTo: 'profile', pathMatch: 'full' },
           {
             path: 'profile',
             loadComponent: () =>
-              import('./features/settings/profile-settings/profile-settings.component').then(
-                m => m.ProfileSettingsComponent
-              ),
+              import('./features/settings/profile-tab/profile-tab.component').then(m => m.ProfileTabComponent),
+          },
+          {
+            path: 'language',
+            loadComponent: () =>
+              import('./features/settings/language-tab/language-tab.component').then(m => m.LanguageTabComponent),
+          },
+          {
+            path: 'security',
+            loadComponent: () =>
+              import('./features/settings/security-tab/security-tab.component').then(m => m.SecurityTabComponent),
+          },
+          {
+            path: 'notifications',
+            loadComponent: () =>
+              import('./features/settings/notifications-tab/notifications-tab.component').then(m => m.NotificationsTabComponent),
           },
         ],
       },

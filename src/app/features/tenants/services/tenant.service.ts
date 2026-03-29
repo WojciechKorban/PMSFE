@@ -1,20 +1,25 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {
   Tenant,
-  TenantOccupancy,
   CreateTenantRequest,
   UpdateTenantRequest,
-  AssignTenantRequest,
+  TenantFilter,
 } from '../models/tenant.models';
 
 @Injectable({ providedIn: 'root' })
 export class TenantService {
   private http = inject(HttpClient);
 
-  getAll(): Observable<Tenant[]> {
-    return this.http.get<Tenant[]>('/api/v1/tenants');
+  getAll(filter?: TenantFilter): Observable<Tenant[]> {
+    let params = new HttpParams();
+    if (filter?.search) params = params.set('search', filter.search);
+    if (filter?.status) params = params.set('status', filter.status);
+    if (filter?.propertyId) params = params.set('propertyId', filter.propertyId);
+    if (filter?.page !== undefined) params = params.set('page', filter.page);
+    if (filter?.size !== undefined) params = params.set('size', filter.size);
+    return this.http.get<Tenant[]>('/api/v1/tenants', { params });
   }
 
   getById(id: string): Observable<Tenant> {
@@ -33,21 +38,15 @@ export class TenantService {
     return this.http.delete<void>(`/api/v1/tenants/${id}`);
   }
 
-  getPropertyTenants(propertyId: string): Observable<TenantOccupancy[]> {
-    return this.http.get<TenantOccupancy[]>(`/api/v1/properties/${propertyId}/tenants`);
+  getPropertyTenants(propertyId: string): Observable<Tenant[]> {
+    return this.http.get<Tenant[]>(`/api/v1/properties/${propertyId}/tenants`);
   }
 
-  assign(propertyId: string, tenantId: string, data: AssignTenantRequest): Observable<TenantOccupancy> {
-    return this.http.post<TenantOccupancy>(
-      `/api/v1/properties/${propertyId}/tenants/${tenantId}/assign`,
-      data
-    );
+  assignOccupancy(propertyId: string, tenantId: string, data: { startDate: string }): Observable<void> {
+    return this.http.post<void>(`/api/v1/properties/${propertyId}/occupancies`, { tenantId, ...data });
   }
 
-  remove(propertyId: string, tenantId: string): Observable<TenantOccupancy> {
-    return this.http.post<TenantOccupancy>(
-      `/api/v1/properties/${propertyId}/tenants/${tenantId}/remove`,
-      {}
-    );
+  removeOccupancy(propertyId: string, tenantId: string): Observable<void> {
+    return this.http.delete<void>(`/api/v1/properties/${propertyId}/occupancies/${tenantId}`);
   }
 }

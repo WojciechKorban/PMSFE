@@ -93,14 +93,14 @@ import { ProfitabilityDashboardComponent } from '../../reports/profitability-das
                   @for (occ of occupanciesResource.value() ?? []; track occ.id) {
                     <div class="occupancy-row">
                       <div class="occupancy-info">
-                        <span>{{ occ.tenantId }}</span>
+                        <span>{{ occ.name }}</span>
                         <span class="occ-dates">
-                          {{ occ.startDate | date:'dd.MM.yyyy' }} –
-                          {{ occ.endDate ? (occ.endDate | date:'dd.MM.yyyy') : ('tenants.occupancy.active' | transloco) }}
+                          {{ occ.currentOccupancy?.startDate | date:'dd.MM.yyyy' }} –
+                          {{ occ.currentOccupancy?.endDate ? (occ.currentOccupancy?.endDate | date:'dd.MM.yyyy') : ('tenants.occupancy.active' | transloco) }}
                         </span>
                       </div>
-                      @if (!occ.endDate) {
-                        <button mat-icon-button color="warn" (click)="removeOccupancy(occ.tenantId)">
+                      @if (!occ.currentOccupancy?.endDate) {
+                        <button mat-icon-button color="warn" (click)="removeOccupancy(occ.id)">
                           <mat-icon>person_remove</mat-icon>
                         </button>
                       }

@@ -41,8 +41,8 @@ import { UtilityType } from '../models/meter.models';
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>{{ 'tariffs.validFrom' | transloco }}</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="validFrom" />
+        <mat-label>{{ 'tariffs.effectiveFrom' | transloco }}</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="effectiveFrom" />
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -72,13 +72,13 @@ export class TariffFormComponent {
   private tariffService = inject(TariffService);
 
   saving = signal(false);
-  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER', 'HEAT', 'OTHER'];
+  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER_COLD', 'WATER_HOT', 'HEAT'];
 
   form = this.fb.group({
     utilityType: ['ELECTRICITY' as UtilityType, Validators.required],
     pricePerUnit: [null as number | null, [Validators.required, Validators.min(0)]],
     currency: ['PLN', [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
-    validFrom: [new Date() as Date | null, Validators.required]
+    effectiveFrom: [new Date() as Date | null, Validators.required]
   });
 
   onSubmit(): void {
@@ -90,11 +90,11 @@ export class TariffFormComponent {
       utilityType: val.utilityType as UtilityType,
       pricePerUnit: val.pricePerUnit!,
       currency: val.currency!,
-      validFrom: (val.validFrom as Date).toISOString().split('T')[0]
+      effectiveFrom: (val.effectiveFrom as Date).toISOString().split('T')[0]
     }).subscribe({
       next: () => {
         this.saving.set(false);
-        this.form.reset({ utilityType: 'ELECTRICITY', currency: 'PLN', validFrom: new Date() });
+        this.form.reset({ utilityType: 'ELECTRICITY', currency: 'PLN', effectiveFrom: new Date() });
         this.tariffAdded.emit();
       },
       error: () => this.saving.set(false)

@@ -3,7 +3,7 @@
     "title": "Profile Settings",
     "email": "Email Address",
     "roles": "Roles",
-    "editNote": "Profile editing (name, email change) is not available in V1. Contact support for changes.",
+    "editNote": "Profile editing is not available in V1.",
     "roleLabel": {
       "ROLE_USER": "User",
       "ROLE_ADMIN": "Administrator"
@@ -11,5 +11,60 @@
   },
   "language": {
     "title": "Language Settings"
+  },
+  "settings": {
+    "tabs": {
+      "profile": "Profile",
+      "security": "Security",
+      "language": "Language & Region",
+      "notifications": "Notifications",
+      "billing": "Plan & Billing"
+    },
+    "comingSoon": "Soon",
+    "language": {
+      "title": "Language & Region",
+      "description": "Choose the display language for the application.",
+      "changed": "Language changed",
+      "note": "Changing language affects the entire application."
+    },
+    "profile": {
+      "title": "Personal Information",
+      "preferencesTitle": "Preferences",
+      "changePhoto": "Change photo",
+      "nameLabel": "Full name",
+      "emailLabel": "Email address",
+      "emailVerified": "Verified",
+      "phoneLabel": "Phone",
+      "currencyLabel": "Currency",
+      "dateFormatLabel": "Date format",
+      "timezoneLabel": "Timezone",
+      "saveButton": "Save changes",
+      "saveSuccess": "Profile updated.",
+      "accountStats": "Account status",
+      "plan": "Plan",
+      "storage": "Storage",
+      "properties": "Properties",
+      "upgradePlan": "Upgrade plan",
+      "activity": "Activity",
+      "lastLogin": "Last login",
+      "ipAddress": "IP address",
+      "device": "Device"
+    },
+    "security": {
+      "title": "Security",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "savePassword": "Change password",
+      "activeSessions": "Active sessions",
+      "device": "Device",
+      "lastActive": "Last active",
+      "ipAddress": "IP address",
+      "revokeSession": "Sign out",
+      "logoutAllButton": "Sign out all",
+      "logoutAllConfirm": "Sign out from all devices?",
+      "passwordChanged": "Password changed."
+    }
   }
 }

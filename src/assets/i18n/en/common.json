@@ -1,7 +1,7 @@
 {
   "app": {
-    "name": "Property Management System",
-    "tagline": "Manage your properties with ease"
+    "name": "LokalManager",
+    "tagline": "Property Management"
   },
   "buttons": {
     "save": "Save",
@@ -21,7 +21,9 @@
     "retry": "Retry",
     "view": "View",
     "manage": "Manage",
-    "menu": "Menu"
+    "menu": "Menu",
+    "submit": "Submit",
+    "logout": "Sign out"
   },
   "labels": {
     "loading": "Loading...",
@@ -78,11 +80,18 @@
   "nav": {
     "dashboard": "Dashboard",
     "properties": "Properties",
+    "meters": "Meters",
     "tenants": "Tenants",
+    "profitability": "Profitability",
     "reports": "Reports",
     "settings": "Settings",
     "admin": "Admin",
-    "logout": "Sign out"
+    "logout": "Sign out",
+    "sections": {
+      "main": "MAIN",
+      "data": "DATA",
+      "system": "SYSTEM"
+    }
   },
   "dashboard": {
     "welcome": "Welcome back, {{name}}!",
@@ -97,7 +106,42 @@
       "action": "Add your first property"
     },
     "recentActivity": "Recent activity",
-    "noActivity": "No recent activity"
+    "noActivity": "No recent activity",
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "alert": {
+      "title": "Notice",
+      "expiringContract": "Contract expires in 25 days — ul. Marszałkowska 15, apt. 3"
+    },
+    "stats": {
+      "revenue": "Revenue",
+      "costs": "Costs",
+      "profit": "Net profit"
+    },
+    "chart": {
+      "title": "Revenue, costs and profit — last 6 months",
+      "viewFull": "Full report",
+      "revenue": "Revenue",
+      "costs": "Costs",
+      "profit": "Profit"
+    },
+    "quickActions": {
+      "title": "Quick actions",
+      "addReading": "Add reading",
+      "addReadingDesc": "Record a meter reading",
+      "addProperty": "Add property",
+      "addPropertyDesc": "Register a new property",
+      "downloadReport": "Download report",
+      "downloadReportDesc": "PDF or CSV with data"
+    },
+    "recentReadings": {
+      "title": "Recent readings",
+      "viewAll": "View all",
+      "empty": "No recent readings"
+    }
   },
   "breadcrumb": {
     "home": "Home",
@@ -116,7 +160,6 @@
   "error": {
     "loadFailed": "Failed to load data. Please try again."
   },
-  "pagination": "Page {{page}} of {{total}}",
   "toggleMenu": "Toggle navigation menu",
   "toggleTheme": "Toggle theme",
   "actions": {
@@ -130,5 +173,60 @@
     "title": "Page not found",
     "message": "The page you are looking for does not exist.",
     "goHome": "Go to Dashboard"
+  },
+  "settings": {
+    "tabs": {
+      "profile": "Profile",
+      "security": "Security",
+      "language": "Language & Region",
+      "notifications": "Notifications",
+      "billing": "Plan & Billing"
+    },
+    "comingSoon": "Soon",
+    "language": {
+      "title": "Language & Region",
+      "description": "Choose the display language for the application.",
+      "changed": "Language changed",
+      "note": "Changing language affects the entire application."
+    },
+    "profile": {
+      "title": "Personal Information",
+      "preferencesTitle": "Preferences",
+      "changePhoto": "Change photo",
+      "nameLabel": "Full name",
+      "emailLabel": "Email address",
+      "emailVerified": "Verified",
+      "phoneLabel": "Phone",
+      "currencyLabel": "Currency",
+      "dateFormatLabel": "Date format",
+      "timezoneLabel": "Timezone",
+      "saveButton": "Save changes",
+      "saveSuccess": "Profile updated.",
+      "accountStats": "Account status",
+      "plan": "Plan",
+      "storage": "Storage",
+      "properties": "Properties",
+      "upgradePlan": "Upgrade plan",
+      "activity": "Activity",
+      "lastLogin": "Last login",
+      "ipAddress": "IP address",
+      "device": "Device"
+    },
+    "security": {
+      "title": "Security",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "savePassword": "Change password",
+      "activeSessions": "Active sessions",
+      "device": "Device",
+      "lastActive": "Last active",
+      "ipAddress": "IP address",
+      "revokeSession": "Sign out",
+      "logoutAllButton": "Sign out all",
+      "logoutAllConfirm": "Sign out from all devices?",
+      "passwordChanged": "Password changed."
+    }
   }
 }

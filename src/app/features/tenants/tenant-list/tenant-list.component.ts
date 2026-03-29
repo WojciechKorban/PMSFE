@@ -49,7 +49,7 @@ import { ConfirmationDialogComponent } from '../../../shared/components/confirma
       <table mat-table [dataSource]="filteredTenants()" class="tenants-table">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>
-          <td mat-cell *matCellDef="let t">{{ t.firstName }} {{ t.lastName }}</td>
+          <td mat-cell *matCellDef="let t">{{ t.name }}</td>
         </ng-container>
         <ng-container matColumnDef="email">
           <th mat-header-cell *matHeaderCellDef>Email</th>
@@ -64,7 +64,7 @@ import { ConfirmationDialogComponent } from '../../../shared/components/confirma
           <td mat-cell *matCellDef="let t">
             <a mat-icon-button [routerLink]="[t.id]"><mat-icon>visibility</mat-icon></a>
             <a mat-icon-button [routerLink]="[t.id, 'edit']"><mat-icon>edit</mat-icon></a>
-            <button mat-icon-button color="warn" (click)="deleteTenant(t.id, t.firstName + ' ' + t.lastName)">
+            <button mat-icon-button color="warn" (click)="deleteTenant(t.id, t.name)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>
@@ -101,7 +101,7 @@ export class TenantListComponent {
     const q = this.searchQuery().toLowerCase().trim();
     if (!q) return tenants;
     return tenants.filter(t =>
-      `${t.firstName} ${t.lastName}`.toLowerCase().includes(q) ||
+      t.name.toLowerCase().includes(q) ||
       t.email.toLowerCase().includes(q)
     );
   });

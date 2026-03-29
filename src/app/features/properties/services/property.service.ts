@@ -1,9 +1,10 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import {
   CreatePropertyRequest,
   PropertyResponse,
+  PropertySummary,
   UpdatePropertyRequest,
 } from '../models/property.models';
 
@@ -12,8 +13,16 @@ export class PropertyService {
   private readonly http = inject(HttpClient);
   private readonly base = '/api/v1/properties';
 
-  getAll(): Observable<PropertyResponse[]> {
-    return this.http.get<PropertyResponse[]>(this.base);
+  getAll(): Observable<PropertySummary[]> {
+    return this.http.get<PropertyResponse[]>(this.base).pipe(
+      map(props => props.map(p => ({
+        ...p,
+        meterCount: 0,
+        activeTenantCount: 0,
+        activeContractCount: 0,
+        lastProfitability: null,
+      } as PropertySummary)))
+    );
   }
 
   getById(id: string): Observable<PropertyResponse> {

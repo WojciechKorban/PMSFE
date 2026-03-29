@@ -1,32 +1,48 @@
+export type TenantStatus = 'ACTIVE' | 'INACTIVE';
+
 export interface Tenant {
   id: string;
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
-  phone: string | null;
-  notes: string | null;
-  createdAt: string;
+  phone?: string | null;
+  status: TenantStatus;
+  currentOccupancy?: OccupancyPeriod | null;
+  occupancyHistory?: OccupancyPeriod[];
 }
 
-export interface TenantOccupancy {
+export interface OccupancyPeriod {
   id: string;
-  tenantId: string;
   propertyId: string;
+  propertyAddress: string;
   startDate: string;
-  endDate: string | null;
-  createdAt: string;
+  endDate?: string | null;
+  monthlyAmount?: number;
+  currency?: string;
+}
+
+export interface TenantDocument {
+  id: string;
+  filename: string;
+  uploadedAt: string;
+  fileSize: number;
 }
 
 export interface CreateTenantRequest {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone?: string;
-  notes?: string;
 }
 
-export type UpdateTenantRequest = CreateTenantRequest;
+export interface UpdateTenantRequest {
+  name?: string;
+  email?: string;
+  phone?: string;
+}
 
-export interface AssignTenantRequest {
-  startDate: string; // YYYY-MM-DD
+export interface TenantFilter {
+  search?: string;
+  status?: string;
+  propertyId?: string;
+  page?: number;
+  size?: number;
 }

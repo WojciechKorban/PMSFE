@@ -1,7 +1,7 @@
 {
   "app": {
-    "name": "System Zarządzania Nieruchomościami",
-    "tagline": "Zarządzaj swoimi nieruchomościami z łatwością"
+    "name": "LokalManager",
+    "tagline": "Zarządzanie nieruchomościami"
   },
   "buttons": {
     "save": "Zapisz",
@@ -21,7 +21,9 @@
     "retry": "Spróbuj ponownie",
     "view": "Zobacz",
     "manage": "Zarządzaj",
-    "menu": "Menu"
+    "menu": "Menu",
+    "submit": "Wyślij",
+    "logout": "Wyloguj się"
   },
   "labels": {
     "loading": "Ładowanie...",
@@ -43,7 +45,7 @@
   "pagination": {
     "showing": "Wyświetlanie",
     "of": "z",
-    "items": "elementów",
+    "items": "pozycji",
     "nextPage": "Następna strona",
     "previousPage": "Poprzednia strona"
   },
@@ -76,13 +78,20 @@
     "label": "Język"
   },
   "nav": {
-    "dashboard": "Pulpit",
+    "dashboard": "Panel główny",
     "properties": "Nieruchomości",
+    "meters": "Liczniki",
     "tenants": "Najemcy",
+    "profitability": "Rentowność",
     "reports": "Raporty",
     "settings": "Ustawienia",
     "admin": "Administrator",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "sections": {
+      "main": "GŁÓWNE",
+      "data": "DANE",
+      "system": "SYSTEM"
+    }
   },
   "dashboard": {
     "welcome": "Witaj, {{name}}!",
@@ -99,7 +108,42 @@
       "action": "Dodaj pierwszą nieruchomość"
     },
     "recentActivity": "Ostatnia aktywność",
-    "noActivity": "Brak ostatniej aktywności"
+    "noActivity": "Brak ostatniej aktywności",
+    "greeting": {
+      "morning": "Dzień dobry",
+      "afternoon": "Dzień dobry",
+      "evening": "Dobry wieczór"
+    },
+    "alert": {
+      "title": "Uwaga",
+      "expiringContract": "Umowa wygasa za 25 dni — ul. Marszałkowska 15, m. 3"
+    },
+    "stats": {
+      "revenue": "Przychód",
+      "costs": "Koszty",
+      "profit": "Zysk netto"
+    },
+    "chart": {
+      "title": "Przychody, koszty i zysk — ostatnie 6 miesięcy",
+      "viewFull": "Pełny raport",
+      "revenue": "Przychód",
+      "costs": "Koszty",
+      "profit": "Zysk"
+    },
+    "quickActions": {
+      "title": "Szybkie akcje",
+      "addReading": "Dodaj odczyt",
+      "addReadingDesc": "Zarejestruj odczyt licznika",
+      "addProperty": "Dodaj nieruchomość",
+      "addPropertyDesc": "Zarejestruj nowy lokal",
+      "downloadReport": "Pobierz raport",
+      "downloadReportDesc": "PDF lub CSV z danymi"
+    },
+    "recentReadings": {
+      "title": "Ostatnie odczyty",
+      "viewAll": "Zobacz wszystkie",
+      "empty": "Brak ostatnich odczytów"
+    }
   },
   "breadcrumb": {
     "home": "Strona główna",
@@ -118,7 +162,6 @@
   "error": {
     "loadFailed": "Nie udało się załadować danych. Spróbuj ponownie."
   },
-  "pagination": "Strona {{page}} z {{total}}",
   "toggleMenu": "Przełącz menu nawigacji",
   "toggleTheme": "Zmień motyw",
   "actions": {
@@ -131,6 +174,61 @@
   "notFound": {
     "title": "Strona nie istnieje",
     "message": "Strona, której szukasz, nie istnieje.",
-    "goHome": "Przejdź do pulpitu"
+    "goHome": "Przejdź do panelu głównego"
+  },
+  "settings": {
+    "tabs": {
+      "profile": "Profil",
+      "security": "Bezpieczeństwo",
+      "language": "Język i region",
+      "notifications": "Powiadomienia",
+      "billing": "Plan i rozliczenia"
+    },
+    "comingSoon": "Wkrótce",
+    "language": {
+      "title": "Język i region",
+      "description": "Wybierz język wyświetlania aplikacji.",
+      "changed": "Język zmieniony",
+      "note": "Zmiana języka dotyczy całej aplikacji."
+    },
+    "profile": {
+      "title": "Dane osobowe",
+      "preferencesTitle": "Preferencje",
+      "changePhoto": "Zmień zdjęcie",
+      "nameLabel": "Imię i nazwisko",
+      "emailLabel": "Adres email",
+      "emailVerified": "Zweryfikowany",
+      "phoneLabel": "Telefon",
+      "currencyLabel": "Waluta",
+      "dateFormatLabel": "Format daty",
+      "timezoneLabel": "Strefa czasowa",
+      "saveButton": "Zapisz zmiany",
+      "saveSuccess": "Dane zostały zaktualizowane.",
+      "accountStats": "Stan konta",
+      "plan": "Plan",
+      "storage": "Przestrzeń",
+      "properties": "Nieruchomości",
+      "upgradePlan": "Ulepsz plan",
+      "activity": "Aktywność",
+      "lastLogin": "Ostatnie logowanie",
+      "ipAddress": "Adres IP",
+      "device": "Urządzenie"
+    },
+    "security": {
+      "title": "Bezpieczeństwo",
+      "changePassword": "Zmiana hasła",
+      "currentPassword": "Aktualne hasło",
+      "newPassword": "Nowe hasło",
+      "confirmPassword": "Potwierdź hasło",
+      "savePassword": "Zmień hasło",
+      "activeSessions": "Aktywne sesje",
+      "device": "Urządzenie",
+      "lastActive": "Ostatnia aktywność",
+      "ipAddress": "Adres IP",
+      "revokeSession": "Wyloguj",
+      "logoutAllButton": "Wyloguj ze wszystkich",
+      "logoutAllConfirm": "Wylogować ze wszystkich urządzeń?",
+      "passwordChanged": "Hasło zostało zmienione."
+    }
   }
 }

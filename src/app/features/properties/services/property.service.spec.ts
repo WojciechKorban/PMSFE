@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { PropertyService } from './property.service';
-import { PropertyResponse, CreatePropertyRequest, UpdatePropertyRequest } from '../models/property.models';
+import { PropertyResponse, PropertySummary, CreatePropertyRequest, UpdatePropertyRequest } from '../models/property.models';
 
 const mockProperty: PropertyResponse = {
   id: '123e4567-e89b-12d3-a456-426614174000',
@@ -47,16 +47,20 @@ describe('PropertyService', () => {
       req.flush([]);
     });
 
-    it('returns PropertyResponse[] on 200', () => {
-      const expected = [mockProperty];
-      let result: PropertyResponse[] = [];
+    it('maps PropertyResponse to PropertySummary with default counts on 200', () => {
+      let result: PropertySummary[] = [];
 
       service.getAll().subscribe(res => (result = res));
 
       const req = httpMock.expectOne('/api/v1/properties');
-      req.flush(expected);
+      req.flush([mockProperty]);
 
-      expect(result).toEqual(expected);
+      expect(result.length).toBe(1);
+      expect(result[0].id).toBe(mockProperty.id);
+      expect(result[0].meterCount).toBe(0);
+      expect(result[0].activeTenantCount).toBe(0);
+      expect(result[0].activeContractCount).toBe(0);
+      expect(result[0].lastProfitability).toBeNull();
     });
   });
 

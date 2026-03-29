@@ -11,11 +11,43 @@
       "lastName": "Nazwisko",
       "email": "Email",
       "phone": "Telefon",
-      "notes": "Uwagi"
+      "notes": "Uwagi",
+      "nameLabel": "Imię i nazwisko",
+      "emailLabel": "Adres email",
+      "phoneLabel": "Numer telefonu",
+      "phonePlaceholder": "+48 600 000 000",
+      "saveSuccess": "Najemca został zapisany."
+    },
+    "list": {
+      "title": "Najemcy",
+      "subtitle": "Lista wszystkich najemców",
+      "addButton": "Dodaj najemcę",
+      "searchPlaceholder": "Szukaj najemcy..."
+    },
+    "filters": {
+      "allStatuses": "Wszystkie statusy",
+      "allProperties": "Wszystkie nieruchomości"
+    },
+    "table": {
+      "name": "Najemca",
+      "contact": "Kontakt",
+      "property": "Nieruchomość",
+      "period": "Okres najmu",
+      "status": "Status"
+    },
+    "timeline": {
+      "present": "teraz",
+      "current": "Aktualny"
     },
     "detail": {
       "title": "Szczegóły najemcy",
-      "occupancy": "Historia zajmowania"
+      "occupancy": "Historia zajmowania",
+      "contactTitle": "Dane kontaktowe",
+      "historyTitle": "Historia najmu",
+      "documentsTitle": "Dokumenty",
+      "noDocuments": "Brak dokumentów",
+      "editButton": "Edytuj najemcę",
+      "deleteButton": "Usuń najemcę"
     },
     "occupancy": {
       "assignTitle": "Przypisz najemcę",
@@ -28,6 +60,14 @@
       "removeConfirmMessage": "Usunąć tego najemcę z nieruchomości?",
       "active": "Aktualnie aktywny",
       "inactive": "Poprzedni najem"
+    },
+    "empty": {
+      "title": "Brak najemców",
+      "description": "Dodaj pierwszego najemcę.",
+      "cta": "Dodaj najemcę"
+    },
+    "errors": {
+      "notFound": "Nie znaleziono najemcy."
     }
   }
 }

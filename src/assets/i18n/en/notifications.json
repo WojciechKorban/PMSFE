@@ -1,4 +1,16 @@
 {
+  "preferences": {
+    "title": "Notification preferences",
+    "emailEnabled": "Email notifications",
+    "leaseExpiryDays": "Lease expiry warning",
+    "leaseExpiryDaysHint": "Days before expiry",
+    "meterReminderDay": "Meter reading reminder",
+    "meterReminderDayHint": "Day of month",
+    "profitabilityReport": "Monthly profitability report",
+    "reportDay": "Report send day",
+    "saveButton": "Save preferences",
+    "saveSuccess": "Preferences saved."
+  },
   "notifications": {
     "preferences": {
       "title": "Notification Preferences",

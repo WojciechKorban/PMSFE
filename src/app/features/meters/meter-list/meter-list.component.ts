@@ -85,7 +85,7 @@ export class MeterListComponent {
 
   filterType = signal<UtilityType | null>(null);
 
-  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER', 'HEAT', 'OTHER'];
+  readonly utilityTypes: UtilityType[] = ['ELECTRICITY', 'GAS', 'WATER_COLD', 'WATER_HOT', 'HEAT'];
 
   metersResource = rxResource({
     params: () => this.propertyId(),
