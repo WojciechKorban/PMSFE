@@ -30,13 +30,13 @@ const STORAGE_KEY = 'pms_sidebar_collapsed';
           <span class="material-icons">apartment</span>
         </div>
         <div class="sidebar-logo-text" aria-hidden="true">
-          LokalManager
-          <span>Property Management</span>
+          {{ 'app.name' | transloco }}
+          <span>{{ 'app.tagline' | transloco }}</span>
         </div>
       </div>
 
       <!-- Navigation -->
-      <nav class="sidebar-nav" aria-label="Navigation principale">
+      <nav class="sidebar-nav" [attr.aria-label]="'nav.navigationAriaLabel' | transloco">
         @for (section of navSections; track section.labelKey) {
           <div class="nav-section">
             <div class="nav-label" aria-hidden="true">{{ section.labelKey | transloco }}</div>
@@ -64,14 +64,18 @@ const STORAGE_KEY = 'pms_sidebar_collapsed';
         <div class="user-avatar">{{ userInitial() }}</div>
         <div class="user-info">
           <div class="user-name">{{ userName() }}</div>
-          <div class="user-role">Właściciel</div>
+          <div class="user-role">{{ 'nav.userRoleOwner' | transloco }}</div>
         </div>
       </div>
 
       <!-- Collapse toggle -->
-      <button class="sidebar-toggle" (click)="toggleCollapse()" [attr.aria-label]="collapsed() ? 'Rozwiń menu' : 'Zwiń menu'">
+      <button
+        class="sidebar-toggle"
+        (click)="toggleCollapse()"
+        [attr.aria-label]="(collapsed() ? 'nav.expandMenu' : 'nav.collapseMenu') | transloco"
+      >
         <span class="material-icons toggle-icon" [class.rotated]="collapsed()">chevron_left</span>
-        <span class="sidebar-toggle-label">Zwiń menu</span>
+        <span class="sidebar-toggle-label">{{ 'nav.collapseMenu' | transloco }}</span>
       </button>
 
     </aside>

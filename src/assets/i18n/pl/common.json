@@ -86,6 +86,12 @@
     "reports": "Raporty",
     "settings": "Ustawienia",
     "admin": "Administrator",
+    "notifications": "Powiadomienia",
+    "userMenu": "Menu użytkownika",
+    "userRoleOwner": "Właściciel",
+    "navigationAriaLabel": "Nawigacja główna",
+    "expandMenu": "Rozwiń menu",
+    "collapseMenu": "Zwiń menu",
     "logout": "Wyloguj się",
     "sections": {
       "main": "GŁÓWNE",

@@ -86,6 +86,12 @@
     "reports": "Reports",
     "settings": "Settings",
     "admin": "Admin",
+    "notifications": "Notifications",
+    "userMenu": "User menu",
+    "userRoleOwner": "Owner",
+    "navigationAriaLabel": "Main navigation",
+    "expandMenu": "Expand menu",
+    "collapseMenu": "Collapse menu",
     "logout": "Sign out",
     "sections": {
       "main": "MAIN",

@@ -24,6 +24,7 @@ const config: Config = {
   collectCoverageFrom: [
     'src/app/core/**/*.ts',
     'src/app/shared/**/*.ts',
+    '!src/app/core/http/mock-api.interceptor.ts',
     '!src/app/**/*.spec.ts',
     '!src/app/**/*.module.ts',
   ],

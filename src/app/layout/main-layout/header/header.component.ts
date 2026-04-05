@@ -46,12 +46,12 @@ import { LanguageSwitcherComponent } from '../../../shared/components/language-s
         </button>
 
         <!-- Notification bell -->
-        <button class="icon-btn" aria-label="Powiadomienia">
+        <button class="icon-btn" [attr.aria-label]="'nav.notifications' | transloco">
           <span class="material-icons">notifications_none</span>
         </button>
 
         <!-- User menu -->
-        <button class="user-btn" [matMenuTriggerFor]="userMenu" aria-label="Menu użytkownika">
+        <button class="user-btn" [matMenuTriggerFor]="userMenu" [attr.aria-label]="'nav.userMenu' | transloco">
           <div class="user-avatar">{{ userInitial() }}</div>
           <span class="user-name hide-mobile">{{ userEmail() }}</span>
           <span class="material-icons dropdown-icon">arrow_drop_down</span>

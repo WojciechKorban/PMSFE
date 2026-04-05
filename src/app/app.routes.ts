@@ -229,6 +229,23 @@ export const appRoutes: Routes = [
           import('./features/reports/reports-page.component').then(m => m.ReportsPageComponent),
       },
       {
+        path: 'meters',
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./features/meters/meters-page.component').then(m => m.MetersPageComponent),
+          },
+          {
+            path: 'reading/:meterId',
+            loadComponent: () =>
+              import('./features/meters/reading-form/reading-form-page.component').then(
+                m => m.ReadingFormPageComponent
+              ),
+          },
+        ],
+      },
+      {
         path: 'profitability',
         loadComponent: () =>
           import('./features/profitability/profitability-page.component').then(m => m.ProfitabilityPageComponent),
